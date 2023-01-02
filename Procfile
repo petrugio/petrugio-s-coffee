@@ -1,0 +1,1 @@
+web: gunicorn petrugio_s_coffee.wsgi:application
