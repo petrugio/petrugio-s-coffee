@@ -1,13 +1,10 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block page_header %}
+{% extends "base.html" %} {% load static %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} 
-{% block content %}
+{% endblock %} {% block content %}
 <div class="container-fluid h-100 front-container">
   <div class="row mb-5">
     <div class="jumbotron p-4 mx-2">
@@ -15,10 +12,40 @@
         Get your best tasting coffee here
       </h1>
       <div class="my-3 text-center">
-        <a href="" class="btn btn-light btn-lg font-weight-bold text-uppercase py-3"
+        <a
+          href=""
+          class="btn btn-light btn-lg font-weight-bold text-uppercase py-3"
           >Shop Now</a
         >
       </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonials section -->
+<div class="container-fluid text-black testimonials-section">
+  <h2 class="text-center">Customers testimonials</h2>
+  <div class="row">
+    <div class="col-12 col-lg-4 p-3">
+      <h3>User 1</h3>
+      <p class="py-3">
+        Nice coffee, well packed, environmentally friendly box, fast delivery.
+      </p>
+    </div>
+    <div class="col-12 col-lg-4 p-3">
+        <h3>User 2</h3>
+        <p class="py-3">
+          Fantastic products, quick response, competitive prices, quick
+          delivery.
+        </p>
+    </div>
+    <div class="col-12 col-lg-4 p-3">
+      <h3>User 3</h3>
+      <p class="py-3">
+        I can't praise Petrugio's Coffee enough - their service from the placing
+        the initial order through to the receiving the products was faultless.
+        Everyone is still talking about how good and and full of aroma the
+        coffee is. Would definitely order again and would greatly recommend!
+      </p>
     </div>
   </div>
 </div>
