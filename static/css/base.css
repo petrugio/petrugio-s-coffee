@@ -11,13 +11,79 @@ body {
     font-family: 'Bungee+Shade';
 }
 
+#topnav {
+    background-color:#E9EBEC;
+}
+
 .front-container {
     display: flex;
     justify-content: flex-end;
-    align-content: flex-end;
     align-items: flex-end;
 }
 
 .jumbotron {
     background-color: #A9A6A4;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-brown {
+    background: #544B46;
+    color: white;
+}
+
+.btn-light:hover,
+.btn-light:active,
+.btn-light:focus,
+.btn-brown:hover,
+.btn-brown:active,
+.btn-brown:focus {
+    background: #665E58;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* Fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
