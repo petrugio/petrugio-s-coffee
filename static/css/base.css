@@ -1,3 +1,4 @@
+/* Generic */
 html {
     height: 100%;
     
@@ -11,18 +12,9 @@ body {
     font-family: 'Bungee+Shade';
 }
 
+/* Navigation */
 #topnav {
     background-color:#E9EBEC;
-}
-
-.front-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.jumbotron {
-    background-color: #A9A6A4;
 }
 
 .icon {
@@ -64,10 +56,22 @@ body {
     border: 1px solid black !important;
 }
 
+/* Main content */
+.front-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.jumbotron {
+    background-color: #A9A6A4;
+}
+
 .testimonials-section {
     background-color:#E9EBEC;
 }
 
+/* Footer */
 footer {
     background-color:#A9A6A4;
 }
