@@ -13,6 +13,7 @@ body {
 }
 
 /* Navigation */
+
 .bg-platinum {
     background-color:#E9EBEC;
 }
@@ -44,6 +45,11 @@ body {
 
 .btn-brown {
     background: #544B46;
+    color: white;
+}
+
+.btn-black {
+    background: black;
     color: white;
 }
 
@@ -105,4 +111,29 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Jumbotron text size on medium and down */
+@media (max-width: 992px) {
+    .h1, h1 {
+        font-size: 2rem;
+    }
+}
+
+.nav-link {
+    padding: 0.15rem;
+}
+
+.h2, h2 {
+    font-size: 1.7rem;
+}
+
+
+.navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+}
+
+#delivery-banner h4 {
+    font-size: .9rem;
 }
