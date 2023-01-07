@@ -51,6 +51,7 @@ body {
 .btn-black {
     background: black;
     color: white;
+    border-radius: 0.3rem;
 }
 
 .btn-light:hover,
@@ -71,12 +72,31 @@ body {
     border: 1px solid black !important;
 }
 
+.nav-link {
+    padding: 0.15rem;
+}
+
+.navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+}
+
+#delivery-banner h4 {
+    font-size: .9rem;
+}
+
+
 /* Main content */
 .front-container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
+
+.h2, h2 {
+    font-size: 1.7rem;
+}
+
 
 /* Footer */
 
@@ -88,6 +108,12 @@ body {
    transform: scale(1.1);
   
 }
+
+ .mc_embed_signup {
+    clear: left;
+    border-radius: 0.3rem;
+    width: 30rem;
+ }
 
 /* -------------------------------- Media Queries */
 
@@ -120,20 +146,3 @@ body {
     }
 }
 
-.nav-link {
-    padding: 0.15rem;
-}
-
-.h2, h2 {
-    font-size: 1.7rem;
-}
-
-
-.navbar-toggler {
-    padding: .6rem .6rem;
-    font-size: 1rem;
-}
-
-#delivery-banner h4 {
-    font-size: .9rem;
-}
