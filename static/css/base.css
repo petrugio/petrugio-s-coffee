@@ -1,13 +1,8 @@
 /* Generic */
-html {
-    height: 100%;
-    
-}
+
 
 body {
-    background: url('/media/coffee.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 130px);
     color: #E9EBEC;
     font-family: 'Bungee+Shade';
 }
@@ -88,15 +83,22 @@ body {
 
 /* Main content */
 .front-container {
+    height: calc(100vh - 130px);
+    background: url('/media/coffee.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
+.allauth-container {
+    height: 100vh;
+    padding-top: 130px;
+}
+
 .h2, h2 {
     font-size: 1.7rem;
 }
-
 
 /* Footer */
 
@@ -115,6 +117,7 @@ body {
     width: 30rem;
  }
 
+ 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -135,8 +138,9 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 130px;
     }
+
 }
 
 /* Jumbotron text size on medium and down */
