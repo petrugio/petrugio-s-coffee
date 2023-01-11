@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'profiles',
     'storages',
 
     'crispy_forms',
@@ -63,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'petrugio_s_coffee.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -112,6 +115,14 @@ WSGI_APPLICATION = 'petrugio_s_coffee.wsgi.application'
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
+
+# Local database is used for automated testing (will be removed later)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
