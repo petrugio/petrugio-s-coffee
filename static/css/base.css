@@ -1,9 +1,12 @@
 /* Generic */
-
+html {
+    height: 100%;
+    
+}
 
 body {
-    height: calc(100vh - 130px);
-    color: #E9EBEC;
+    height: 100vh;
+    background-color: #E9EBEC;
     font-family: 'Bungee+Shade';
 }
 
@@ -21,6 +24,9 @@ body {
     background: #000 !important;
 }
 
+#topnav h1 {
+    font-size: 1.7rem;
+}
 
 .icon {
     align-items: center;
@@ -49,6 +55,13 @@ body {
     border-radius: 0.3rem;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+
 .btn-light:hover,
 .btn-light:active,
 .btn-light:focus,
@@ -57,6 +70,13 @@ body {
 .btn-brown:focus {
     background: #665E58;
     color: white;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .text-black {
@@ -83,7 +103,7 @@ body {
 
 /* Main content */
 .front-container {
-    height: calc(100vh - 130px);
+    height: 100vh;
     background: url('/media/coffee.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -96,19 +116,13 @@ body {
     padding-top: 130px;
 }
 
-.h2, h2 {
-    font-size: 1.7rem;
-}
-
 /* Footer */
-
 .social-links:hover {
    display: inline-block;
    -webkit-transform: scale(1.1); 
    -moz-transform: scale(1.1);
    -o-transform: scale(1.1); 
    transform: scale(1.1);
-  
 }
 
  .mc_embed_signup {
@@ -117,6 +131,73 @@ body {
     width: 30rem;
  }
 
+ /* Allauth form formatting */
+ .allauth-form-inner-content {
+    border-radius: 0.3rem;
+ }
+
+ .allauth-form-inner-content h2 {
+    text-align: center;
+}
+
+.allauth-form-inner-content p {
+    color: #000;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0.3rem;
+    margin: 0.4rem 0;
+}
+
+.allauth-form-inner-content input:not([type='submit']) {
+    width: 100%;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+#id_remember {
+    width: auto;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #A9A6A4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    background-color: #414141;
+    border-color: #414141;
+}
+
+.allauth-form-inner-content a {
+    font-weight: bold;
+	color: #2c3c5c;;
+}
  
 /* -------------------------------- Media Queries */
 
@@ -137,10 +218,9 @@ body {
         z-index: 1030;
     }
 
-    .header-container {
-        padding-top: 130px;
+    .allauth-container {
+        padding-top: 176px;
     }
-
 }
 
 /* Jumbotron text size on medium and down */
@@ -150,3 +230,11 @@ body {
     }
 }
 
+/* Allauth container adjustment for devices with small screen height*/
+@media (max-height: 550px) {
+    .allauth-container {
+        height: auto;
+        margin-bottom: 3rem;
+      
+    }
+}
