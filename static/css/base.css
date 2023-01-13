@@ -116,6 +116,11 @@ body {
     padding-top: 130px;
 }
 
+.profile-container {
+    height: 100vh;
+    padding-top: 130px;
+}
+
 /* Footer */
 .social-links:hover {
    display: inline-block;
@@ -218,7 +223,7 @@ body {
         z-index: 1030;
     }
 
-    .allauth-container {
+    .allauth-container, .profile-container {
         padding-top: 176px;
     }
 }
@@ -231,10 +236,10 @@ body {
 }
 
 /* Allauth container adjustment for devices with small screen height*/
-@media (max-height: 550px) {
-    .allauth-container {
+@media (max-height: 650px) {
+    .allauth-container, .profile-container  {
         height: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 10rem;
       
     }
 }
