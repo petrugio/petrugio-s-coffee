@@ -167,6 +167,14 @@ body {
     width: auto;
 }
 
+.form-check-label {
+    padding-left: 0.9rem;
+}
+
+.form-check {
+    padding: 0;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #A9A6A4;
 }
