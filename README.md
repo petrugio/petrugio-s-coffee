@@ -75,5 +75,5 @@
 
   | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
   | --- | ------------ |------------| ------------|
-  | [#40]https://github.com/petrugio/petrugio-s-coffee/issues/40) | User | submit a message to the Store Manager/admin | I can be contacted back regarding my question/issue |
+  | [#40](https://github.com/petrugio/petrugio-s-coffee/issues/40) | User | submit a message to the Store Manager/admin | I can be contacted back regarding my question/issue |
   | [#41](https://github.com/petrugio/petrugio-s-coffee/issues/41) | Store Manager/admin | view messages sent to me by users | I can attempt to solve the issue |
