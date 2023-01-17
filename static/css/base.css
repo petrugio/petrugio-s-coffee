@@ -116,6 +116,12 @@ body {
     padding-top: 130px;
 }
 
+
+/* Products */
+.products-container {
+    padding-top: 130px;
+}
+
 /* Footer */
 .social-links:hover {
    display: inline-block;
@@ -226,7 +232,7 @@ body {
         z-index: 1030;
     }
 
-    .main-container {
+    .main-container, .products-container {
         padding-top: 176px;
     }
 }

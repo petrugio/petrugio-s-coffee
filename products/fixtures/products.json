@@ -291,7 +291,7 @@
         "model": "products.product",
         "fields": {
             "sku": "p00019",
-            "name": "Nescafé Azera Espresso - 100 g. Instant Coffee",
+            "name": "Nescafé Azera Espresso - 100g. Instant Coffee",
             "description": "With Nescafé Azera Espresso you get a coffee that, despite being an instant coffee, is very close to a 'real' espresso, like the one you know from cafes or a capsule machine",
             "price": 6.49,
             "category": 3,
