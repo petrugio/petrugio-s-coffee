@@ -1,0 +1,513 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00001",
+            "name": "Bristot Espresso Ground Coffee",
+            "description": "The fragrances of the best Brazilian Arabica Alta Mogiana qualities and of the selected Indian Arabica are emphasized by the slow roasting. A touch of Robusta India Parchment enriches its character which is expressed in all its aromatic tones using the espresso maker. An intense moment of pleasure, which envelopes you in a whirl of emotions.",
+            "price": 6.95,
+            "category": 2,
+            "intensity": "Intense",
+            "weight": "250g",
+            "rating": 4.7,
+            "image_url": "",
+            "image": "pi00001.webp"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00002",
+            "name": "STARBUCKS Caffè Verona Ground Coffee",
+            "description": "Enjoy Starbucks coffee at home. Starbucks Caffè Verona Ground Coffee is a rich, well-balanced coffee with a bold flavour and dark cocoa texture. Made from dark-roasted 100% arabica, it's already ground for your convenience.",
+            "price": 4.99,
+            "category": 2,
+            "intensity": "Medium",
+            "weight": "200g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00002.webp"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00003",
+            "name": "Starbucks Veranda Blend",
+            "description": "The Veranda blend ground coffee by Starbucks has a distinctive blonde roast flavour that is mellow and light-bodied as compared to other blends. It consists of 100% Arabica coffee with a touch of soft cocoa and lightly toasted nuts that produce a lovely aftertaste.",
+            "price": 6.79,
+            "category": 2,
+            "intensity": "Mild",
+            "weight": "200g",
+            "rating": 4.2,
+            "image_url": "",
+            "image": "pi00003.webp"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00004",
+            "name": "Cafedirect Rich Roast Blend",
+            "description": "Café Direct Rich Roast Fresh Ground Coffee is the perfect start to your day either at home or at the office. Explore a world of taste with Café Direct range of 100% Fairtrade drinks.By choosing fairtrade you can be assured of better and fairer trading conditions for farmers and workers so they can invest in a better future for their communities. From the rich, intense African coffees to the sweet, subtle coffees from Latin America, there is a taste to suit everyone.",
+            "price": 7.95,
+            "category": 2,
+            "intensity": "Intense",
+            "weight": "227g",
+            "rating": 4.8,
+            "image_url": "",
+            "image": "pi00004.webp"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00005",
+            "name": "Jacobs Meisterröstung - Master Roast",
+            "description": "Carefully coordinated types of coffee give the ground coffee JACOBS Meisterröstung its perfectly strong aroma. JACOBS Meisterröstung is a stimulating coffee that gives new impetus and makes drinking coffee a special pleasure – a strong coffee for all moments in life.",
+            "price": 8.99,
+            "category": 2,
+            "intensity": "Strong",
+            "weight": "500g",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00005.webp"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00006",
+            "name": "Equal Exchange Coffee Organic",
+            "description": "This Equal Exchange blend combines organic arabica coffee from Peru and Mexico, medium roasted to let the sweet, nutty flavours shine through. 70% of the coffee in this bag is grown by the women farmers of UNICAFEC in mountainous Northern Peru, with 30% from Cepco in Mexico. This product is Fairly traded, is Organic and is Vegan.",
+            "price": 8.9,
+            "category": 2,
+            "intensity": "Medium",
+            "weight": "227g",
+            "rating": 5,
+            "image_url": "",
+            "image": "pi00006.webp"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00007",
+            "name": "Segafredo Selezione Crema - coffee beans - 1 kilo",
+            "description": "The arabica and robusta coffee beans of the Selezione Crema come from Brazil, Costa Rica and Ivory Coast. The flavour is characterised by a medium body and low acidity with varied scents such as vanilla, nuts, mocha, sweet fruits, dark cocoa and a little liquorice.",
+            "price": 10.49,
+            "category": 1,
+            "intensity": "Medium",
+            "weight": "1kg",
+            "rating": 4.7,
+            "image_url": "",
+            "image": "pi00007.webp"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00008",
+            "name": "Lavazza Crema e Gusto Classico - coffee beans - 1 kilo",
+            "description": "Crema e Gusto Classico is a smooth and intense blend of fine Brazilian Arabica and Southeast Asian Robusta. A perfect balance of full-bodied and spicy notes. The ideal coffee for any time of the day.",
+            "price": 13.71,
+            "category": 1,
+            "intensity": "Strong",
+            "weight": "1kg",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00008.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00009",
+            "name": "Kaffekapslen Classic - Everyday Coffee",
+            "description": "Do you love grinding your own coffee beans? With a whole 1 kg you will have more than enough beans to keep the coffee grinder busy.",
+            "price": 7.49,
+            "category": 1,
+            "intensity": "Medium",
+            "weight": "227g",
+            "rating": 5,
+            "image_url": "",
+            "image": "pi00009.webp"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00010",
+            "name": "Saol Caife Temple Bar Coffee Beans 1kg",
+            "description": "Temple Bar Espresso Coffee BeansOur best selling espresso blend is a slightly darker-than-medium roast that is smooth and low in acidity. It is ideal for a latte or cappuccino, or exquisite on its own making it an excellent choice for cafes and restaurants.",
+            "price": 9.99,
+            "category": 1,
+            "intensity": "Medium",
+            "weight": "1kg",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00010.webp"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00011",
+            "name": "Pelican Rouge Concerto Coffee Blend 1 kg",
+            "description": "Mellow bodied with a strong flavour, this is a blend of predominantly Robusta beans which has a distinct taste. Spicy with a subtle bitterness.",
+            "price": 10.13,
+            "category": 1,
+            "intensity": "Medium",
+            "weight": "1kg",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00011.webp"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00012",
+            "name": "La Vida Coffee | Medium, Dark Roast | Beans",
+            "description": "La Vida blend is predominantly crafted using Latin American coffee offering a smooth and sweet acidity. La Vida has notes of roasted almonds and peanuts developing on the palate. The finish develops into a lovely caramel and toffee flavour. A medium body offers flexibility with your choice of brewing method.",
+            "price": 20.28,
+            "category": 1,
+            "intensity": "Medium",
+            "weight": "1kg",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00012.webp"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00013",
+            "name": "Nescafe Gold Blend Intense Instant Coffee",
+            "description": "Discover NESCAFÉ GOLD BLEND Intense, a stronger coffee blend, crafted for those who prefer a more intense cup. This full-bodied premium instant coffee contains a blend of dark-roasted Arabica and Robusta coffee beans, to create an intense taste and rich aroma for our darkest coffee roast. Take a moment to relax with this carefully crafted NESCAFÉ GOLD BLEND Intense coffee and discover its rich, full-bodied flavour and strong toasted notes.",
+            "price": 6.76,
+            "category": 3,
+            "intensity": "Intense",
+            "weight": "200g",
+            "rating": 4.7,
+            "image_url": "",
+            "image": "pi00013.webp"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00014",
+            "name": "Skinny Instant Gold Coffee",
+            "description": "Weekly morning coffees - in a rush for work? no problem! our skinny coffees have you covered, and feel energised and alive. Looking to cut the costs of leading market coffee shops? We all know that takeaway coffees are overpriced! why not become a barista at home, you can add our skinny coffee over ice for the perfect low-calorie iced coffee.",
+            "price": 4.95,
+            "category": 3,
+            "intensity": "Mild",
+            "weight": "100g",
+            "rating": 4.3,
+            "image_url": "",
+            "image": "pi00014.webp"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00015",
+            "name": "Carte Noire Intense Instant Coffee",
+            "description": "Perfect for those who enjoy a vigorous and robust tasting coffee to kick-start the day. A dark roast blend of carefully selected Arabica and Robusta beans that reveals an even richer and intense character. ",
+            "price": 4.73,
+            "category": 3,
+            "intensity": "Intense",
+            "weight": "100g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00015.webp"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00016",
+            "name": "Maxwell House Instant Coffee Granules ",
+            "description": "Deliciously rich coffee. Simply add boiling water for an easy drink. Large re-sealable tin lid for maximum freshness. Complex and subtle blend",
+            "price": 32.87,
+            "category": 3,
+            "intensity": "Mild",
+            "weight": "750g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00016.webp"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00017",
+            "name": "UCC The Blend 117 Instant Coffee",
+            "description": "UCC The Blend 117 Instant Coffee. To make the Ultimate Blend, UCC Master Coffee Appraisers made 500 types of Blended Coffee samples. Carefully feeling the taste of each one, until finally only a few blends were selected. Of these, the taste Number 117 was chosen. The Blend 117 instant coffee has been a popular, loved and long time seller since it was introduced back in 1988. Deep Rich Aroma and a Deep Rich Flavor. It is an instant coffee blended from carefully selected coffee beans from Brazil and Columbia. (Regular Instant Coffee contains No Sugar or Milk).",
+            "price": 15.56,
+            "category": 3,
+            "intensity": "Medium",
+            "weight": "90g",
+            "rating": 5,
+            "image_url": "",
+            "image": "pi00017.webp"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00018",
+            "name": "Nescafe Gold Blend Roastery Collection Dark Roast Instant Coffee",
+            "description": "Experience the unique and unrivalled flavour of NESCAFÉ GOLD BLEND Roastery Collection. A deliciously dark roasted instant coffee with notes of dark chocolate and roasted nut for a rich and intense flavour. Crafted with high quality coffee beans expertly roasted in two individual batches to bring out the most intense flavours and rich aromas.",
+            "price": 7.95,
+            "category": 3,
+            "intensity": "Intense",
+            "weight": "95g",
+            "rating": 4.5,
+            "image_url": "",
+            "image": "pi00018.webp"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00019",
+            "name": "Nescafé Azera Espresso - 100 g. Instant Coffee",
+            "description": "With Nescafé Azera Espresso you get a coffee that, despite being an instant coffee, is very close to a 'real' espresso, like the one you know from cafes or a capsule machine",
+            "price": 6.49,
+            "category": 3,
+            "intensity": "Strong",
+            "weight": "100g",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00019.webp"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00020",
+            "name": "Nescafé Azera Americano",
+            "description": "With this variant, Nescafé has remade the well-known Americano in instant coffee form. An Americano is known for being a little less intense than the regular espresso, with a taste and body that is reminiscent of filter coffee.",
+            "price": 6.49,
+            "category": 3,
+            "intensity": "Medium",
+            "weight": "100g",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00020.webp"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00021",
+            "name": "Nescafe Gold Origins Alta Rica Instant Coffee",
+            "description": "Nescafé is a name that is synonymous with great coffee, and this Alta Rica coffee is no exception. Produced using 100% Arabica beans, which is reflected in the rich full bodied flavour, this delicious coffee tastes has a strong taste without any bitterness. It can be enjoyed without the addition of cream or sugar but it s also delicious made with hot milk.",
+            "price": 6.1,
+            "category": 3,
+            "intensity": "Strong",
+            "weight": "95g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00021.webp"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00022",
+            "name": "Costa Cappuccino",
+            "description": "A specially crafted blend of coffee beans roasted to perfection to create the same authentic taste of a Costa espresso based Cappuccino, topped with velvety frothy milk. Insert a Tassimo T DISC pod into the machine & enjoy.",
+            "price": 7.98,
+            "category": 4,
+            "intensity": "Mild",
+            "weight": "280g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00022.webp"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00023",
+            "name": "Nescafe Gold Cappuccino Instant Coffee 1kg",
+            "description": "Enjoy the frothy taste of a hot cappuccino in an instant with Nescafe Gold Cappuccino. No need to froth or steam milk, just measure out a portion, add hot water and stir. Made with 100% Arabica coffee with whitener for a deliciously frothy top. For those who prefer a full-bodied, creamy taste with just 68 calories per cup. This 1kg tin contains enough coffee for around 60 cups, ideal for caterers or office kitchens.",
+            "price": 21.06,
+            "category": 4,
+            "intensity": "Mild",
+            "weight": "1kg",
+            "rating": 4.8,
+            "image_url": "",
+            "image": "pi00023.webp"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00024",
+            "name": "Cafedirect Rich Roast Blend",
+            "description": "Deliciously chocolaty Jacobs Cappuccino Choco Nuts instant coffee powder with a hazelnut twist. Jacobs Cappuccino Choco Nut is a luscious instant cappuccino with creamy foam.",
+            "price": 5.9,
+            "category": 4,
+            "intensity": "Medium",
+            "weight": "500g",
+            "rating": 4.8,
+            "image_url": "",
+            "image": "pi00024.webp"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00025",
+            "name": "Kenco Cappuccino Instant Coffee 750g",
+            "description": "Carefully coordinated types of coffee give the ground coffee JACOBS Meisterröstung its perfectly strong aroma. JACOBS Meisterröstung is a stimulating coffee that gives new impetus and makes drinking coffee a special pleasure – a strong coffee for all moments in life.",
+            "price": 23.66,
+            "category": 4,
+            "intensity": "Medium",
+            "weight": "750g",
+            "rating": 4.7,
+            "image_url": "",
+            "image": "pi00025.webp"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00026",
+            "name": "Cafedirect Smooth Roast Instant Coffee - 500g",
+            "description": "Freeze dried instant coffee Real Taste Deliciously smooth, full-flavoured coffee. The perfect blend of Latin American and African beans. Small Philosophy... At Cafédirect we do things differently. For over 20 years we've built real relationships with smallholder growers, because the big thing smallholders have is pride and passion... and that's what makes our award-winning coffee taste so good. Big difference... In return we pay growers what they deserve, instead of paying middle men. And by working together in true partnership we do more, investing over 50% of our profits in growers to create a more sustainable future. Cafédirect. Made the small way.",
+            "price": 26.5,
+            "category": 5,
+            "intensity": "Medium",
+            "weight": "500g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00026.webp"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00027",
+            "name": "Outdoor Coffee Gift Set",
+            "description": "WORDLY MIX OF COFFEES - The recipient will travel a world of flavours with the box's exquisite selection of 7 single estate coffees. From Brazilian richness to Ethiopian crispness, there’s no limits to where the coffee tasting experience can take you.",
+            "price": 23.66,
+            "category": 5,
+            "intensity": "Medium",
+            "weight": "330g",
+            "rating": 4.7,
+            "image_url": "",
+            "image": "pi00027.webp"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00028",
+            "name": "Whittard of Chelsea | Coffees of the World Gift Set For Men & Women | 9 x 66g Ground Coffee Bags",
+            "description": "Travel the world with exciting coffee: Start your day in Guatemala and end it in Sumatra with our globetrotting coffee gift set - perfect birthday gift for him or her, especially global coffee lovers. Rich Coffee Flavours: Our Coffees of the World Gift Set offers a different taste for every mood, from rich and chocolatey to sweet and fruity bursting flavours. Suitable for both a hot brew or an iced coffee!",
+            "price": 28,
+            "category": 5,
+            "intensity": "Medium",
+            "weight": "594g",
+            "rating": 4.8,
+            "image_url": "",
+            "image": "pi00028.webp"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00029",
+            "name": "Union Roasted Coffee Union Hand-Roasted Coffee",
+            "description": "Union Hand-Roasted Coffee House Roast - Cafetiere Grind",
+            "price": 7.07,
+            "category": 6,
+            "intensity": "Medium",
+            "weight": "200g",
+            "rating": 4.1,
+            "image_url": "",
+            "image": "pi00029.webp"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00030",
+            "name": "Bird & Wild Signature Espresso",
+            "description": "Bird & Wild only roasts seasonal coffee certified as Bird Friendly & Shade-Grown by the Smithsonian Migratory Bird Centre & contributes to support their research and conservation programs. Our coffees are naturally grown under the rainforest canopy, a haven for birds and other wildlife & ideal conditions for nurturing deliciously different beans with a taste of the wild.",
+            "price": 7.43,
+            "category": 6,
+            "intensity": "Medium",
+            "weight": "200g",
+            "rating": 4.9,
+            "image_url": "",
+            "image": "pi00030.webp"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00031",
+            "name": "Jacobs Babymoden KRONUNG COFFEE",
+            "description": "Jacobs Kronung Ground Coffee by Jacob's Jacobs Kronung is the classic German coffee! Experts select beans from the best growing areas in the world, and carefully blend them to compose this fine coffee. Roasting awakens the aroma of the beans and gives the coffee its unique flavor. Find out for yourselves why this delicious coffee is the Number One Best Seller!",
+            "price": 33.82,
+            "category": 7,
+            "intensity": "Medium",
+            "weight": "2kg",
+            "rating": 4.5,
+            "image_url": "",
+            "image": "pi00031.webp"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00032",
+            "name": "Grano Milano Hazelnut - 100 Coffee Capsules | 100% Arabica Nespresso",
+            "description": "Capsules are suitable for Nespresso Original line machines, not compatible with Vertuo line! 100 single serve capsules of delicious New Grano Milano Hazelnut. Delicate nutty flavour and a sweet scent of cinnamon. Enjoy a cup full of citrus brightness and notes of acidity complemented with a lingering chocolate finish. Our Hazelnut will leave you with the flavour of warm, roasted nuts",
+            "price": 13.89,
+            "category": 7,
+            "intensity": "Strong",
+            "weight": "810g",
+            "rating": 4.6,
+            "image_url": "",
+            "image": "pi00032.webp"
+        }
+    }
+]
