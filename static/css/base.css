@@ -122,6 +122,11 @@ body {
     padding-top: 130px;
 }
 
+.image-container {
+    border-radius: 0.3rem;
+ }
+
+
 /* Footer */
 .social-links:hover {
    display: inline-block;

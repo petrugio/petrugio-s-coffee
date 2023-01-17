@@ -17,11 +17,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0 p-3">
                                 {% if product.image %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
@@ -32,21 +32,22 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <p class="lead mb-0 text-center font-weight-bold">${{ product.price }}</p>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="d-flex justify-content-between">
-                                                    {% if product.weight %}
-                                                        <small class="text-muted text-left">Weight: {{ product.weight }}</small>
-                                                    {% else %}
-                                                        <small class="text-muted text-left">No Weight</small>
-                                                    {% endif %}
-                                                    {% if product.rating %}
-                                                        <small class="text-muted text-right"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                                    {% else %}
-                                                        <small class="text-muted text-right">No Rating</small>
-                                                    {% endif %}
-                                                    </div>
-                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between">
+                                            {% if product.weight %}
+                                                <small class="text-muted">Weight: {{ product.weight }}</small>
+                                            {% else %}
+                                                <small class="text-muted">No Weight</small>
+                                            {% endif %}
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
                                             </div>
                                         </div>
                                     </div>
