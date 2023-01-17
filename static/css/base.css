@@ -111,12 +111,7 @@ body {
     align-items: flex-end;
 }
 
-.allauth-container {
-    height: 100vh;
-    padding-top: 130px;
-}
-
-.profile-container {
+.main-container {
     height: 100vh;
     padding-top: 130px;
 }
@@ -231,7 +226,7 @@ body {
         z-index: 1030;
     }
 
-    .allauth-container, .profile-container {
+    .main-container {
         padding-top: 176px;
     }
 }
@@ -245,7 +240,7 @@ body {
 
 /* Allauth container adjustment for devices with small screen height*/
 @media (max-height: 650px) {
-    .allauth-container, .profile-container  {
+    .main-container {
         height: auto;
         margin-bottom: 10rem;
       
