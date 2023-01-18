@@ -10,6 +10,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    intensity = None
     sort = None
     direction = None
 
@@ -31,6 +32,10 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'intensity' in request.GET:
+            intensity = request.GET['intensity']
+            products = products.filter(intensity=intensity)
 
         if 'q' in request.GET:
             query = request.GET['q']
