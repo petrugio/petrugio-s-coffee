@@ -7,21 +7,21 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <strong class="pl-2">Display products</strong>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'products' %}" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <div class="dropdown-divider"></div>
                 <strong class="pl-2">Brewing method</strong>
-                <a href="{% url 'products' %}" class="dropdown-item">Coffee Beans</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">Ground coffee</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">Instant coffee</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Cappuccino</a>
+                <a href="{% url 'products' %}?category=coffee_beans" class="dropdown-item">Coffee Beans</a>
+                <a href="{% url 'products' %}?category=ground_coffee" class="dropdown-item ">Ground coffee</a>
+                <a href="{% url 'products' %}?category=instant_coffee" class="dropdown-item ">Instant coffee</a>
+                <a href="{% url 'products' %}?category=cappuccino" class="dropdown-item">Cappuccino</a>
                 <div class="dropdown-divider"></div>
                 <strong class="pl-2">Intensity</strong>
-                <a href="{% url 'products' %}" class="dropdown-item">Mild</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">Medium</a>
-                <a href="{% url 'products' %}" class="dropdown-item ">Strong</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Intense</a>
+                <a href="{% url 'products' %}?intensity=Mild" class="dropdown-item">Mild</a>
+                <a href="{% url 'products' %}?intensity=Medium" class="dropdown-item ">Medium</a>
+                <a href="{% url 'products' %}?intensity=Strong" class="dropdown-item ">Strong</a>
+                <a href="{% url 'products' %}?intensity=Intense" class="dropdown-item">Intense</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -29,10 +29,10 @@
                 Deals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
 
