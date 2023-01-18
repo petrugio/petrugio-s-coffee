@@ -22,26 +22,34 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0"><strong>{{ product.name }}</strong></p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <div class="col-12 text-center">
+                        {% if request.user.is_superuser %}
+                            <small class="p-1">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="d-flex justify-content-between pt-2">
-                            {% if product.weight %}
-                                <small class="text-muted">Weight: {{ product.weight }}</small>
-                            {% else %}
-                                <small class="text-muted">No Weight</small>
-                            {% endif %}
-                            {% if product.category %}
-                                <p class="small">
-                                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                    </a>
-                                </p>
-                            {% endif %}
-                            {% if product.rating %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
-                            {% else %}
-                                <small class="text-muted">No Rating</small>
-                            {% endif %}
+                                {% if product.weight %}
+                                    <small class="text-muted">Weight: {{ product.weight }}</small>
+                                {% else %}
+                                    <small class="text-muted">No Weight</small>
+                                {% endif %}
+                                {% if product.category %}
+                                    <p class="small">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                {% endif %}
+                                {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
+                                {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
