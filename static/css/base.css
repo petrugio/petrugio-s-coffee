@@ -113,19 +113,23 @@ body {
 
 .main-container {
     height: 100vh;
-    padding-top: 130px;
+    padding-top: 120px;
 }
 
 
 /* Products */
 .products-container {
-    padding-top: 130px;
+    padding-top: 120px;
 }
 
 .image-container {
     border-radius: 0.3rem;
  }
 
+ a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
 
 /* Footer */
 .social-links:hover {
@@ -238,9 +242,10 @@ body {
     }
 
     .main-container, .products-container {
-        padding-top: 176px;
+        padding-top: 166px;
     }
 }
+
 
 /* Jumbotron text size on medium and down */
 @media (max-width: 992px) {
@@ -257,3 +262,11 @@ body {
       
     }
 }
+
+@media (max-width: 991px){
+    #products_page {
+        height: auto;
+             
+    }
+}
+  
