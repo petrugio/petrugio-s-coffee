@@ -55,6 +55,11 @@ body {
     border-radius: 0.3rem;
 }
 
+.btn-black:hover {
+    background: white;
+    color: black;
+}
+
 .btn-outline-black {
     background: white;
     color: black !important;
@@ -111,14 +116,48 @@ body {
     align-items: flex-end;
 }
 
-.allauth-container {
+.main-container {
     height: 100vh;
-    padding-top: 130px;
+    padding-top: 120px;
 }
 
-.profile-container {
-    height: 100vh;
-    padding-top: 130px;
+
+/* Products */
+.products-container {
+    padding-top: 120px;
+}
+
+.image-container {
+    border-radius: 0.3rem;
+ }
+
+ a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    min-width: 100%;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: black;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /* Footer */
@@ -167,6 +206,14 @@ body {
     width: auto;
 }
 
+.form-check-label {
+    padding-left: 0.9rem;
+}
+
+.form-check {
+    padding: 0;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #A9A6A4;
 }
@@ -203,7 +250,22 @@ body {
     font-weight: bold;
 	color: #2c3c5c;;
 }
- 
+
+/* Back to top button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    border-radius: 0.3rem;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -223,10 +285,11 @@ body {
         z-index: 1030;
     }
 
-    .allauth-container, .profile-container {
-        padding-top: 176px;
+    .main-container, .products-container {
+        padding-top: 166px;
     }
 }
+
 
 /* Jumbotron text size on medium and down */
 @media (max-width: 992px) {
@@ -237,9 +300,17 @@ body {
 
 /* Allauth container adjustment for devices with small screen height*/
 @media (max-height: 650px) {
-    .allauth-container, .profile-container  {
+    .main-container {
         height: auto;
         margin-bottom: 10rem;
       
     }
 }
+
+@media (max-width: 991px){
+    #products_page {
+        height: auto;
+             
+    }
+}
+  
