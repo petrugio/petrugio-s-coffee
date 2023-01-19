@@ -263,7 +263,9 @@ body {
     border-radius: 0.3rem;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
