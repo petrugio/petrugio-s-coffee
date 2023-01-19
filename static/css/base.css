@@ -136,6 +136,30 @@ body {
     color: #fff !important;
 }
 
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    min-width: 100%;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: black;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
 /* Footer */
 .social-links:hover {
    display: inline-block;
