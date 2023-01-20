@@ -117,8 +117,9 @@ body {
 }
 
 .main-container {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 120px;
+    padding-bottom: 2rem;
 }
 
 
@@ -262,7 +263,9 @@ body {
     border-radius: 0.3rem;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -299,13 +302,13 @@ body {
 }
 
 /* Allauth container adjustment for devices with small screen height*/
-@media (max-height: 650px) {
+/* @media (max-height: 650px) {
     .main-container {
         height: auto;
         margin-bottom: 10rem;
       
     }
-}
+} */
 
 @media (max-width: 991px){
     #products_page {
