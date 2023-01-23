@@ -20,6 +20,10 @@ body {
     background-color:#A9A6A4;
 }
 
+.color-brown {
+    color: #544B46;
+}
+
 .bg-black {
     background: #000 !important;
 }
@@ -103,6 +107,10 @@ body {
 
 #delivery-banner h4 {
     font-size: .9rem;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
 }
 
 
@@ -331,7 +339,7 @@ body {
     border-bottom-color: #343a40 !important;
 }
 
-.bag-notification-wrapper {
+.basket-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -384,4 +392,47 @@ body {
              
     }
 }
-  
+
+.display-4.logo-font.text-black {
+    font-size: 2rem;
+}
+
+.nav-link {
+    padding: 0.15rem;
+}
+
+.nav-link i.fa-lg {
+    font-size: 1rem;
+}
+
+.navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+}
+
+#delivery-banner h4 {
+    font-size: .9rem;
+}
+
+.btn.btn-outline-black.rounded,
+.btn.btn-black.rounded {
+    padding: .375rem .375rem;
+}
+
+.btn.btn-outline-black.rounded.btn-lg,
+.btn.btn-black.rounded.btn-lg {
+    padding: .375rem .375rem;
+    font-size: .75rem;
+}
+
+.increment-qty, .decrement-qty {
+    padding: .25rem .5rem !important;
+}
+
+.color-dg {
+    color:#800707!important;
+}
+
+.color-inf {
+    color:#134847!important;
+}
