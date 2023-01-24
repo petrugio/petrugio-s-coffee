@@ -37,8 +37,8 @@
   | --- | ------------ |------------| ------------|
   | [#18](https://github.com/petrugio/petrugio-s-coffee/issues/18) | User | add products to an online shopping basket | I can purchase multiple items |
   | [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) | User | see all the items in my shopping basket | I can double check if I added the needed quantity and sizes |
-  | [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) | User | adjust the quantity of any product in my bag | I can buy the right amount |
-  | [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) | User | remove products from my bag | I can choose not to buy them |
+  | [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) | User | adjust the quantity of any product in my basket | I can buy the right amount |
+  | [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) | User | remove products from my basket | I can choose not to buy them |
   | [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) | User | see the total value of my shopping basket | I can decide if it fits my budget |
   | [#23](https://github.com/petrugio/petrugio-s-coffee/issues/23) | User | see a notification when adding to/updating/removing from shopping basket | I can be sure the action was successful | 
 
