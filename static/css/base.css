@@ -429,10 +429,15 @@ input[name='q']::placeholder {
     padding: .25rem .5rem !important;
 }
 
-.color-dg {
-    color:#800707!important;
+.color-btn, .remove-item small,
+#color-btn-ed,
+.color-btn #color-btn-pr-del {
+    color:#800707;
 }
 
-.color-inf {
-    color:#134847!important;
+#color-btn,
+.color-btn #color-btn-pr,
+.color-btn #color-btn-det,
+#color-ord {
+    color:#134847;
 }
