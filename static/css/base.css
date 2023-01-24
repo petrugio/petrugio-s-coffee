@@ -435,6 +435,7 @@ input[name='q']::placeholder {
 
 .color-btn #color-btn,
 .color-btn #color-btn-pr,
-.color-btn #color-btn-det {
+.color-btn #color-btn-det,
+#color-ord {
     color:#134847;
 }
