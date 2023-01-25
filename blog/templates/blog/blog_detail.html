@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{% block extra_title %}| Blog Detail{% endblock %}
+
+<div class="container main-container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font">Blog detail</h2>
+            <hr class="w-50 mb-3">
+            <h3 class="py-2 color-brown">{{ blog.title }}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-5">  
+            <div class="card">
+                <div class="card-body rounded">
+                    <div class="image-container">
+                        {% if blog.image %}
+                        <div class="my-3 text-center">
+                            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-fluid">
+                        </div>
+                        {% else %}
+                        <div class="my-3 text-center">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.title }}" class="img-fluid">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="px-3 d-flex justify-content-between">
+                    <p class="card-text text-muted">{{ blog.created}}</p> 
+                    <p><i class="far fa-heart text-right"></i> {{ blog.number_of_likes }}</p>
+                </div>
+            </div>   
+        </div>
+        <div class="col-12 col-md-7 mt-5 mt-md-0">
+            {{blog.content|striptags|cut:"&nbsp;"}}
+            <div class="text-center mt-5">
+                <a class="btn btn-black border-black" href="{% url 'blog' %}">Back to blogs</a>
+            </div>
+        </div>
+    </div>     
+</div>
+{% endblock content %}

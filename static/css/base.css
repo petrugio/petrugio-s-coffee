@@ -347,7 +347,7 @@ input[name='q']::placeholder {
 
 /* Blog */
 .my-flex-card > div > div.card {
-    height: calc(100% - 15px);
+    height: calc(100% - 25px);
     margin-bottom: 15px;
 }
 

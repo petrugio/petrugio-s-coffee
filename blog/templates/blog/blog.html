@@ -15,7 +15,7 @@
                         <div class="card mb-4">
                             <div class="card-body rounded text-black">
                                 <div class="image-container">
-                                    <a href="{% url 'blog_detail' blog.slug  %}" class="blog-link text-decoration-none">
+                                    <a href="{% url 'blog_detail' blog.slug  %}" class="text-decoration-none">
                                     {% if blog.image %}
                                     <div class="my-3 text-center">
                                         <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-fluid">
