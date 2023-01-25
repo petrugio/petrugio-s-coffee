@@ -345,6 +345,12 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* Blog */
+.my-flex-card > div > div.card {
+    height: calc(100% - 25px);
+    margin-bottom: 15px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
