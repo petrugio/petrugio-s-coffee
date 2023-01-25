@@ -60,6 +60,10 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
+            current_basket = basket_contents(request)
+            order.delivery_cost = current_basket['delivery']
+            order.order_total = current_basket['total']
+            order.grand_total = current_basket['grand_total']
             order.save()
             for item_id, item_data in basket.items():
                 try:
