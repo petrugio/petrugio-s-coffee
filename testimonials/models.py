@@ -17,6 +17,7 @@ class Testimonials(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
+        verbose_name_plural = 'Testimonials'
         """Sorts testimonials in descending order"""
         ordering = ["-created"]
 
