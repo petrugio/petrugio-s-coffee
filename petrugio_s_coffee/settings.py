@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'checkout',
     'django_summernote',
     'blog',
+    'testimonials',
     'storages',
 
     'crispy_forms',
