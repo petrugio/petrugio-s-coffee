@@ -81,3 +81,39 @@ def add_testimonial(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_testimonial(request, slug):
+    """ Edit a testimonial """
+
+    has_orders = Order.objects.filter(
+        email=request.user.email).count() > 0
+    if not has_orders:
+        messages.error(
+                request, 'Failed to edit testimonial.'
+                'Please oder something before adding a testimonial.')
+        return redirect(reverse('testimonials'))
+
+    testimonial = get_object_or_404(Testimonials, slug=slug)
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, instance=testimonial)
+        if form.is_valid():
+            testimonial = form.save()
+            messages.success(request, 'Successfully edited testimonial!')
+            return redirect(reverse(
+                'testimonials'))
+        else:
+            messages.error(
+                request, 'Failed to add testimonial.'
+                'Please ensure the form is valid.')
+    else:
+        form = TestimonialForm(instance=testimonial)
+
+    template = 'testimonials/edit_testimonial.html'
+    context = {
+        'form': form,
+        "testimonial": testimonial,
+    }
+
+    return render(request, template, context)
