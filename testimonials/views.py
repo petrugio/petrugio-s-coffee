@@ -13,12 +13,17 @@ def testimonial_list(request):
     """Function to display testimonials
        and to check if the user made any orders"""
     queryset = Testimonials.objects.filter(status=1).order_by("-created")
-    user_email = request.user.email if hasattr(request.user, 'email') else ""
-    has_orders = Order.objects.filter(
-        email=user_email).count() > 0
-    queryset_author = queryset.filter(author=request.user)
-    is_admin = request.user.is_superuser
 
+    if request.user.is_authenticated:
+        queryset_author = queryset.filter(author=request.user)
+        has_orders = Order.objects.filter(
+            email=request.user.email).count() > 0
+
+    else:
+        queryset_author = None
+        has_orders = False
+
+    is_admin = request.user.is_superuser
     paginate_by = 6
 
     return render(
