@@ -117,3 +117,20 @@ def edit_testimonial(request, slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_testimonial(request, slug):
+    """ Delete a testimonial from the store website """
+
+    testimonial = get_object_or_404(Testimonials, slug=slug)
+
+    if not (testimonial.author == request.user or request.user.is_superuser):
+        messages.error(request,
+                       'Sorry, only author or admin can delete testimonials.'
+                       )
+        return redirect(reverse('testimonials'))
+
+    testimonial.delete()
+    messages.success(request, 'Testimonial deleted!')
+    return redirect(reverse('testimonials'))
