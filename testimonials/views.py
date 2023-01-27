@@ -42,11 +42,25 @@ def testimonial_detail(request, slug):
     queryset = Testimonials.objects.filter(status=1)
     testimonial = get_object_or_404(queryset, slug=slug)
 
+    if request.user.is_authenticated:
+        queryset_author = queryset.filter(author=request.user)
+        has_orders = Order.objects.filter(
+            email=request.user.email).count() > 0
+
+    else:
+        queryset_author = None
+        has_orders = False
+
+    is_admin = request.user.is_superuser
+
     return render(
         request,
         "testimonials/testimonial_detail.html",
         {
-            "testimonial": testimonial
+            "testimonial": testimonial,
+            'has_orders': has_orders,
+            'queryset_author': queryset_author,
+            'is_admin': is_admin,
         }
     )
 
