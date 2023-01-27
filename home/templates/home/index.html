@@ -1,13 +1,7 @@
 {% extends "base.html" %} 
 {% load static %} 
 
-{% block page_header %}
-  <div class="container">
-    <div class="row">
-      <div class="col"></div>
-    </div>
-  </div>
-{% endblock %}
+{% block extra_title %}|Home{% endblock %}
 
 {% block content %}
   <!-- Jumbotron-->
@@ -28,31 +22,28 @@
     </div>
   </div>
   <!-- Testimonials section -->
-  <div class="container-fluid text-black  bg-platinum text-center">
+  <div class="container-fluid text-black  bg-platinum">
     <h2 class="text-center">Customers testimonials</h2>
-    <div class="row">
-      <div class="col-12 col-lg-4 p-3">
-        <h3>User 1</h3>
-        <p class="py-3">
-          Nice coffee, well packed, environmentally friendly box, fast delivery.
-        </p>
+    <div class="col-12 mt-3 left">
+      <div class="row my-flex-card">
+          {% for testimonial in testimonials %}
+              <div class="col-sm-12 col-lg-4">
+                  <div class="card mb-4">
+                      <div class="card-body rounded text-black pb-1">
+                          <div class="h-50">
+                              <h2 class="card-title text-black">{{ testimonial.title|safe|truncatechars:20 }}</h2>
+                              <div class="text-black text-decoration-none">
+                                  <p>{{ testimonial.content|safe|truncatechars:40}}</p>
+                              </div>
+                          </div>
+                          <hr>
+                          <p class="text-muted small p-0 m-0">Created: {{ testimonial.created}}</p>
+                          <p class="text-muted small p-0">Author: {{ testimonial.author}}</p>
+                      </div>
+                  </div>
+              </div>
+          {% endfor %}
       </div>
-      <div class="col-12 col-lg-4 p-3">
-          <h3>User 2</h3>
-          <p class="py-3">
-            Fantastic products, quick response, competitive prices, quick
-            delivery.
-          </p>
-      </div>
-      <div class="col-12 col-lg-4 p-3">
-        <h3>User 3</h3>
-        <p class="py-3">
-          I can't praise Petrugio's Coffee enough - their service from the placing
-          the initial order through to the receiving the products was faultless.
-          Everyone is still talking about how good and and full of aroma the
-          coffee is. Would definitely order again and would greatly recommend!
-        </p>
-      </div>
-    </div>
+  </div>
   </div>
 {% endblock %}

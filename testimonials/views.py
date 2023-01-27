@@ -10,13 +10,21 @@ from .forms import TestimonialForm
 
 
 def testimonial_list(request):
-    """Function to display testimonials
-       and to check if the user made any orders"""
+    """ Function to display testimonials
+       and to check if the user made any orders """
+
     queryset = Testimonials.objects.filter(status=1).order_by("-created")
-    user_email = request.user.email if hasattr(request.user, 'email') else ""
-    has_orders = Order.objects.filter(
-        email=user_email).count() > 0
-    paginate_by = 6
+
+    if request.user.is_authenticated:
+        queryset_author = queryset.filter(author=request.user)
+        has_orders = Order.objects.filter(
+            email=request.user.email).count() > 0
+
+    else:
+        queryset_author = None
+        has_orders = False
+
+    is_admin = request.user.is_superuser
 
     return render(
         request,
@@ -24,22 +32,40 @@ def testimonial_list(request):
         {
             'testimonials': queryset,
             'has_orders': has_orders,
+            'queryset_author': queryset_author,
+            'is_admin': is_admin,
         }
     )
 
 
-# def testimonial_detail(request, slug):
+def testimonial_detail(request, slug):
+    """ Function to display testimonials details page
+       and to check if the user made any orders """
 
-#     queryset = Testimonials.objects.filter(status=1)
-#     testimonial = get_object_or_404(queryset, slug=slug)
+    queryset = Testimonials.objects.filter(status=1)
+    testimonial = get_object_or_404(queryset, slug=slug)
 
-#     return render(
-#         request,
-#         "testimonials/testimonial_detail.html",
-#         {
-#             "testimonial": testimonial
-#         }
-#     )
+    if request.user.is_authenticated:
+        queryset_author = queryset.filter(author=request.user)
+        has_orders = Order.objects.filter(
+            email=request.user.email).count() > 0
+
+    else:
+        queryset_author = None
+        has_orders = False
+
+    is_admin = request.user.is_superuser
+
+    return render(
+        request,
+        "testimonials/testimonial_detail.html",
+        {
+            "testimonial": testimonial,
+            'has_orders': has_orders,
+            'queryset_author': queryset_author,
+            'is_admin': is_admin,
+        }
+    )
 
 
 @login_required
@@ -48,25 +74,25 @@ def add_testimonial(request):
 
     has_orders = Order.objects.filter(
         email=request.user.email).count() > 0
+    if not has_orders:
+        messages.error(
+                request, 'Failed to add testimonial.'
+                'Please oder something before adding a testimonial.')
+        return redirect(reverse('testimonials'))
 
     if request.method == 'POST':
-        if has_orders:
-            form = TestimonialForm(request.POST)
-            if form.is_valid():
-                testimonial = form.save(commit=False)
-                testimonial.author = request.user
-                testimonial.save()
-                messages.success(request, 'Successfully added testimonial!')
-                return redirect(reverse(
-                    'testimonials'))
-            else:
-                messages.error(
-                    request, 'Failed to add testimonial.'
-                    'Please ensure the form is valid.')
+        form = TestimonialForm(request.POST)
+        if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.author = request.user
+            testimonial.save()
+            messages.success(request, 'Successfully added testimonial!')
+            return redirect(reverse(
+                'testimonials'))
         else:
             messages.error(
-                    request, 'Failed to add testimonial.'
-                    'Please oder something before adding a testimonial.')
+                request, 'Failed to add testimonial.'
+                'Please ensure the form is valid.')
     else:
         form = TestimonialForm()
 
@@ -76,3 +102,56 @@ def add_testimonial(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_testimonial(request, slug):
+    """ Edit a testimonial """
+
+    has_orders = Order.objects.filter(
+        email=request.user.email).count() > 0
+    if not has_orders:
+        messages.error(
+                request, 'Failed to edit testimonial.'
+                'Please oder something before adding a testimonial.')
+        return redirect(reverse('testimonials'))
+
+    testimonial = get_object_or_404(Testimonials, slug=slug)
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, instance=testimonial)
+        if form.is_valid():
+            testimonial = form.save()
+            messages.success(request, 'Successfully edited testimonial!')
+            return redirect(reverse(
+                'testimonials'))
+        else:
+            messages.error(
+                request, 'Failed to edit testimonial.'
+                'Please ensure the form is valid.')
+    else:
+        form = TestimonialForm(instance=testimonial)
+
+    template = 'testimonials/edit_testimonial.html'
+    context = {
+        'form': form,
+        "testimonial": testimonial,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_testimonial(request, slug):
+    """ Delete a testimonial from the store website """
+
+    testimonial = get_object_or_404(Testimonials, slug=slug)
+
+    if not (testimonial.author == request.user or request.user.is_superuser):
+        messages.error(request,
+                       'Sorry, only author or admin can delete testimonials.'
+                       )
+        return redirect(reverse('testimonials'))
+
+    testimonial.delete()
+    messages.success(request, 'Testimonial deleted!')
+    return redirect(reverse('testimonials'))
