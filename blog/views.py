@@ -5,6 +5,8 @@ from .models import Blog
 
 
 class BlogList(generic.ListView):
+    """Class to display blogs"""
+
     model = Blog
     queryset = Blog.objects.filter(status=1).order_by("-created")
     template_name = "blog/blog.html"
@@ -12,6 +14,7 @@ class BlogList(generic.ListView):
 
 
 class BlogDetail(View):
+    """Class to display blog detail"""
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Blog.objects.filter(status=1)
@@ -29,30 +32,15 @@ class BlogDetail(View):
             },
         )
 
-    def blog(self, request, slug, *args, **kwargs):
-
-        queryset = Blog.objects.filter(status=1)
-        blog = get_object_or_404(queryset, slug=slug)
-        liked = False
-        if blog.likes.filter(id=self.request.user.id).exists():
-            liked = True
-
-        return render(
-            request,
-            "blog/blog_detail.html",
-            {
-                "liked": liked
-            },
-        )
-
 
 class BlogLike(View):
+    """Class to like/unlike a post"""
 
-    def blog(self, request, slug, *args, **kwargs):
+    def post(self, request, slug, *args, **kwargs):
         blog = get_object_or_404(Blog, slug=slug)
         if blog.likes.filter(id=request.user.id).exists():
             blog.likes.remove(request.user)
         else:
             blog.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('blog/blog_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
