@@ -437,13 +437,15 @@ input[name='q']::placeholder {
 
 .color-btn, .remove-item small,
 #color-btn-ed,
-.color-btn #color-btn-pr-del {
+.color-btn #color-btn-pr-del,
+#color-btn-del-tes {
     color:#800707;
 }
 
 #color-btn,
 .color-btn #color-btn-pr,
 .color-btn #color-btn-det,
-#color-ord {
+#color-ord,
+#color-btn-edit-tes {
     color:#134847;
 }

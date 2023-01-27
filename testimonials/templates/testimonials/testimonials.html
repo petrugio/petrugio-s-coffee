@@ -14,31 +14,33 @@
             {% endif %}
         </div>
         <div class="col-12 mt-3 left">
-            <div class="row ">
+            <div class="row my-flex-card">
                 {% for testimonial in testimonials %}
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <a href="{% url 'testimonial_detail' testimonial.slug  %}" class="text-decoration-none">
-                        <div class="card mb-4">
-                            <div class="card-body rounded text-black">
-                                <div class="">
-                                    <h2 class="card-title text-black">{{ testimonial.title|safe }}</h2>
-                                    <p class="card-text text-black text-decoration-none">{{ testimonial.content|safe}}</p>
+                            <div class="card">
+                                <div class="card-body rounded text-black pb-1">
+                                    <div class="h-50">
+                                        <h2 class="card-title text-black">{{ testimonial.title|safe|truncatechars:20 }}</h2>
+                                        <div class="text-black text-decoration-none">
+                                            <p>{{ testimonial.content|safe|truncatechars:30}}</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-12 text-center small">
+                                            {% if testimonial in queryset_author %}
+                                            <a id="color-btn-edit-tes" href="{% url 'edit_testimonial' testimonial.slug %}">Edit</a> | 
+                                            {% endif %}
+                                            {% if testimonial in queryset_author or is_admin %}
+                                            <a id="color-btn-del-tes" href="{% url 'delete_testimonial' testimonial.slug %}">Delete</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <p class="text-muted small p-0 m-0">Created: {{ testimonial.created}}</p>
+                                    <p class="text-muted small p-0">Author: {{ testimonial.author}}</p>
                                 </div>
-                                
-                                <hr/>
-                                {% if testimonial in queryset_author %}
-                                <a class="btn btn-outline-black" href="{% url 'edit_testimonial' testimonial.slug %}">Edit</a>
-                                {% endif %}
-                                {% if testimonial in queryset_author or is_admin %}
-                                <a class="btn btn-outline-black" href="{% url 'delete_testimonial' testimonial.slug %}">Delete</a>
-                                {% endif %}
-                                <p class="card-text text-muted h6">{{ testimonial.created}}</p>
-                                <p class="card-text text-muted h6">{{ testimonial.updated}}</p>
-                                <p class="card-text text-muted h6">{{ testimonial.author}}</p>
-                                
-                            
                             </div>
-                        </div>
                         </a>
                     </div>
                     
