@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% block extra_title %}|Testimonials{% endblock %}
+
 <div class="container main-container">
     <div class="row">
         <div class="col text-center">
@@ -12,25 +14,32 @@
             {% endif %}
         </div>
         <div class="col-12 mt-3 left">
-            <div class="row my-flex-card">
+            <div class="row ">
                 {% for testimonial in testimonials %}
                     <div class="col-sm-12 col-md-12 col-lg-4">
+                        <a href="{% url 'testimonial_detail' testimonial.slug  %}" class="text-decoration-none">
                         <div class="card mb-4">
                             <div class="card-body rounded text-black">
-                                <div class="image-container">
-                                    <a href="" class="text-decoration-none">
-                                    <h2 class="card-title text-black">{{ testimonials.title }}</h2>
-                                    <p class="card-text text-black">{{ testimonials.content|safe|truncatewords:10 }}</p>
+                                <div class="">
+                                    <h2 class="card-title text-black">{{ testimonial.title|safe }}</h2>
+                                    <p class="card-text text-black text-decoration-none">{{ testimonial.content|safe}}</p>
                                 </div>
-                                </a>
+                                
                                 <hr/>
-                                <div class="d-flex justify-content-between">
-                                <p class="card-text text-muted h6">{{ testimonials.created}}</p>
-                                <p class="card-text text-muted h6">{{ testimonials.updated}}</p>
-                                <p class="card-text text-muted h6">{{ testimonials.author}}</p>
-                                </div>
+                                {% if testimonial in queryset_author %}
+                                <a class="btn btn-outline-black" href="{% url 'edit_testimonial' testimonial.slug %}">Edit</a>
+                                {% endif %}
+                                {% if testimonial in queryset_author or is_admin %}
+                                <a class="btn btn-outline-black" href="{% url 'delete_testimonial' testimonial.slug %}">Delete</a>
+                                {% endif %}
+                                <p class="card-text text-muted h6">{{ testimonial.created}}</p>
+                                <p class="card-text text-muted h6">{{ testimonial.updated}}</p>
+                                <p class="card-text text-muted h6">{{ testimonial.author}}</p>
+                                
+                            
                             </div>
                         </div>
+                        </a>
                     </div>
                     
                     {% if forloop.counter|divisibleby:1 %}
