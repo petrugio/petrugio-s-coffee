@@ -72,6 +72,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'petrugio_s_coffee.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+SUMMERNOTE_THEME = 'bs4'
 
 TEMPLATES = [
     {
@@ -167,6 +168,53 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+# django_summernote config
+SUMMERNOTE_CONFIG = {
+    # Use this when you're already using Bootstrap/jQuery based themes.
+    'iframe': True,
+
+    # You can put custom Summernote settings
+    'summernote': {
+
+        # Change editor size
+        'width': '100%',
+        'height': '480',
+
+        # Use proper language setting automatically (default)
+        'lang': None,
+
+        'fontNames': ['Bungee+Shade'],
+        'fontNamesIgnoreCheck': ['Bungee+Shade'],
+        'fontSizes': ['16'],
+        'fontSizeUnits': ['px'],
+        # Toolbar customization
+        # https://summernote.org/deep-dive/#custom-toolbar-popover
+        'toolbar': [
+            ['font', ['bold', 'underline']],
+            ['fontname', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['fontSizes', ['16']],
+            ['style', ['p', 'h2', 'h3', 'h4', 'h5', 'h6']],
+            ['color', ['black']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['view', ['fullscreen', 'help']],
+        ],
+    },
+    # You can add custom css/js for SummernoteWidget.
+
+    'css': (
+        'https://petrugio-s-coffee.s3.eu-west-1.amazonaws.com/static/css/summernote.css',
+    ),
+    'js': (
+        'https://petrugio-s-coffee.s3.eu-west-1.amazonaws.com/static/js/summernote.js',
+    ),
+    # Lazy initialization
+    # If you want to initialize summernote at the bottom of page,
+    # set this as True and call `initSummernote()` on your page.
+    'lazy': False,
+}
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
