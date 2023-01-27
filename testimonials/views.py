@@ -10,8 +10,9 @@ from .forms import TestimonialForm
 
 
 def testimonial_list(request):
-    """Function to display testimonials
-       and to check if the user made any orders"""
+    """ Function to display testimonials
+       and to check if the user made any orders """
+
     queryset = Testimonials.objects.filter(status=1).order_by("-created")
 
     if request.user.is_authenticated:
@@ -38,6 +39,8 @@ def testimonial_list(request):
 
 
 def testimonial_detail(request, slug):
+    """ Function to display testimonials details page
+       and to check if the user made any orders """
 
     queryset = Testimonials.objects.filter(status=1)
     testimonial = get_object_or_404(queryset, slug=slug)
@@ -123,7 +126,7 @@ def edit_testimonial(request, slug):
                 'testimonials'))
         else:
             messages.error(
-                request, 'Failed to add testimonial.'
+                request, 'Failed to edit testimonial.'
                 'Please ensure the form is valid.')
     else:
         form = TestimonialForm(instance=testimonial)
