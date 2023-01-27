@@ -16,6 +16,9 @@ def testimonial_list(request):
     user_email = request.user.email if hasattr(request.user, 'email') else ""
     has_orders = Order.objects.filter(
         email=user_email).count() > 0
+    queryset_author = queryset.filter(author=request.user)
+    is_admin = request.user.is_superuser
+
     paginate_by = 6
 
     return render(
@@ -24,22 +27,24 @@ def testimonial_list(request):
         {
             'testimonials': queryset,
             'has_orders': has_orders,
+            'queryset_author': queryset_author,
+            'is_admin': is_admin,
         }
     )
 
 
-# def testimonial_detail(request, slug):
+def testimonial_detail(request, slug):
 
-#     queryset = Testimonials.objects.filter(status=1)
-#     testimonial = get_object_or_404(queryset, slug=slug)
+    queryset = Testimonials.objects.filter(status=1)
+    testimonial = get_object_or_404(queryset, slug=slug)
 
-#     return render(
-#         request,
-#         "testimonials/testimonial_detail.html",
-#         {
-#             "testimonial": testimonial
-#         }
-#     )
+    return render(
+        request,
+        "testimonials/testimonial_detail.html",
+        {
+            "testimonial": testimonial
+        }
+    )
 
 
 @login_required
@@ -48,25 +53,25 @@ def add_testimonial(request):
 
     has_orders = Order.objects.filter(
         email=request.user.email).count() > 0
+    if not has_orders:
+        messages.error(
+                request, 'Failed to add testimonial.'
+                'Please oder something before adding a testimonial.')
+        return redirect(reverse('testimonials'))
 
     if request.method == 'POST':
-        if has_orders:
-            form = TestimonialForm(request.POST)
-            if form.is_valid():
-                testimonial = form.save(commit=False)
-                testimonial.author = request.user
-                testimonial.save()
-                messages.success(request, 'Successfully added testimonial!')
-                return redirect(reverse(
-                    'testimonials'))
-            else:
-                messages.error(
-                    request, 'Failed to add testimonial.'
-                    'Please ensure the form is valid.')
+        form = TestimonialForm(request.POST)
+        if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.author = request.user
+            testimonial.save()
+            messages.success(request, 'Successfully added testimonial!')
+            return redirect(reverse(
+                'testimonials'))
         else:
             messages.error(
-                    request, 'Failed to add testimonial.'
-                    'Please oder something before adding a testimonial.')
+                request, 'Failed to add testimonial.'
+                'Please ensure the form is valid.')
     else:
         form = TestimonialForm()
 
