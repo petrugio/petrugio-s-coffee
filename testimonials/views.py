@@ -24,7 +24,6 @@ def testimonial_list(request):
         has_orders = False
 
     is_admin = request.user.is_superuser
-    paginate_by = 6
 
     return render(
         request,

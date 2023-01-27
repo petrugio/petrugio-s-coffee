@@ -16,9 +16,9 @@
         <div class="col-12 mt-3 left">
             <div class="row my-flex-card">
                 {% for testimonial in testimonials %}
-                    <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
                         <a href="{% url 'testimonial_detail' testimonial.slug  %}" class="text-decoration-none">
-                            <div class="card">
+                            <div class="card mb-4">
                                 <div class="card-body rounded text-black pb-1">
                                     <div class="h-50">
                                         <h2 class="card-title text-black">{{ testimonial.title|safe|truncatechars:20 }}</h2>
@@ -67,20 +67,6 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
-    {% if is_paginated %}
-    <hr class="w-50 mb-1">
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-black rounded">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-black rounded"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
 {%endblock%}
 
