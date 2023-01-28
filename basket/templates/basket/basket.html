@@ -2,6 +2,8 @@
 {% load static %}
 {% load basket_tools %}
 
+{% block extra_title %}| Shopping Basket{% endblock %}
+
 {% block content %}
     <div class="container main-container">
         <div class="row">
@@ -10,7 +12,6 @@
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 {% if basket_items %}
@@ -61,7 +62,6 @@
                                 <th scope="col">Subtotal</th>
                             </tr>
                         </thead>
-
                         {% for item in basket_items %}
                             <tr>
                                 <td class="p-3 w-25">
@@ -114,6 +114,7 @@
         window.scrollTo(0,0)
     })
 </script>
+
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">

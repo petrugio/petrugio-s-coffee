@@ -1,16 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| Blog{% endblock %}
 
 {% block content %}
-
-{% block extra_title %}|Blog{% endblock %}
-
 <div class="container main-container">
     <div class="row">
         <div class="col text-center">
             <h2 class="logo-font">Blog</h2>
             <hr class="w-50 mb-1">
         </div>
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3">
             <div class="row my-flex-card">
                 {% for blog in blog_list %}
                     <div class="col-sm-12 col-md-6 col-lg-4">

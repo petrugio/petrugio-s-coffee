@@ -1,9 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| Testimonials{% endblock %}
 
 {% block content %}
-
-{% block extra_title %}|Testimonials{% endblock %}
-
 <div class="container main-container">
     <div class="row">
         <div class="col text-center">
@@ -13,7 +13,7 @@
                 <a class="btn btn-outline-black" href="{% url 'add_testimonial' %}">Add Testimonial</a>
             {% endif %}
         </div>
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3">
             <div class="row my-flex-card">
                 {% for testimonial in testimonials %}
                     <div class="col-sm-12 col-md-6 col-lg-4">

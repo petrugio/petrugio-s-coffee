@@ -3,6 +3,7 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """ To show products on the admin page """
 
     list_display = (
         'sku',
@@ -19,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """ To show categories on the admin page """
 
     list_display = (
         'friendly_name',

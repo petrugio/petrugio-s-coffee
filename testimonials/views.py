@@ -85,6 +85,7 @@ def add_testimonial(request):
         if form.is_valid():
             testimonial = form.save(commit=False)
             testimonial.author = request.user
+            testimonial.status = 1
             testimonial.save()
             messages.success(request, 'Successfully added testimonial!')
             return redirect(reverse(
@@ -108,6 +109,13 @@ def add_testimonial(request):
 def edit_testimonial(request, slug):
     """ Edit a testimonial """
 
+    testimonial = get_object_or_404(Testimonials, slug=slug)
+    if not testimonial.author == request.user:
+        messages.error(request,
+                       'Sorry, only author can edit a testimonial.'
+                       )
+        return redirect(reverse('testimonials'))
+
     has_orders = Order.objects.filter(
         email=request.user.email).count() > 0
     if not has_orders:
@@ -116,7 +124,6 @@ def edit_testimonial(request, slug):
                 'Please oder something before adding a testimonial.')
         return redirect(reverse('testimonials'))
 
-    testimonial = get_object_or_404(Testimonials, slug=slug)
     if request.method == 'POST':
         form = TestimonialForm(request.POST, instance=testimonial)
         if form.is_valid():
