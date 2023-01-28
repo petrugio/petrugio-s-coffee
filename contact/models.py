@@ -11,3 +11,10 @@ class Contact(models.Model):
     message = models.TextField()
     date_sent = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        """
+        Meta data for the contact app
+        """
+        verbose_name_plural = 'Contact'
+        ordering = ('-date_sent',)
