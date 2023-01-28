@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /profiles/
+Disallow: /basket/
+Disallow: /checkout/
+Disallow: /checkout/checkout_success/
+Sitemap: https://petrugio-s-coffee.herokuapp.com/sitemap.xml
