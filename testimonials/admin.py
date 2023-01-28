@@ -5,6 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Testimonials)
 class TestimonialsAdmin(SummernoteModelAdmin):
+    """ To show summernote widget on the admin page """
 
     list_display = ('title', 'slug', 'status', 'created', 'updated', 'author')
     search_fields = ['title', 'content']

@@ -1,3 +1,4 @@
+// JS for the summernote text input widget
 $('#summernote').summernote({
     fontNames: ['Bungee+Shade', 'serif'],
     fontNamesIgnoreCheck: ['Bungee+Shade', 'serif'],
