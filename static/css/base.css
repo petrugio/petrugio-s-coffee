@@ -383,15 +383,6 @@ input[name='q']::placeholder {
     }
 }
 
-/* Allauth container adjustment for devices with small screen height*/
-/* @media (max-height: 650px) {
-    .main-container {
-        height: auto;
-        margin-bottom: 10rem;
-      
-    }
-} */
-
 @media (max-width: 991px){
     #products_page {
         height: auto;
