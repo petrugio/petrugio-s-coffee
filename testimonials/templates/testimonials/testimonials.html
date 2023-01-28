@@ -23,7 +23,7 @@
                                     <div class="h-50">
                                         <h2 class="card-title text-black">{{ testimonial.title|safe|truncatechars:20 }}</h2>
                                         <div class="text-black text-decoration-none">
-                                            <p>{{ testimonial.content|safe|truncatechars:30}}</p>
+                                            <p>{{ testimonial.content|safe|striptags|truncatechars:30}}</p>
                                         </div>
                                     </div>
                                     <hr>
