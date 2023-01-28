@@ -10,7 +10,8 @@ class Contact(models.Model):
     email = models.EmailField()
     message = models.TextField()
     date_sent = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             null=True, blank=True)
 
     class Meta:
         """
