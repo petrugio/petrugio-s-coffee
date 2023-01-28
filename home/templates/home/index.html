@@ -31,9 +31,9 @@
                   <div class="card mb-4">
                       <div class="card-body rounded text-black pb-1">
                           <div class="h-50">
-                              <h2 class="card-title text-black">{{ testimonial.title|safe|truncatechars:20 }}</h2>
+                              <h2 class="card-title text-black">{{ testimonial.title|safe|striptags|truncatechars:20 }}</h2>
                               <div class="text-black text-decoration-none">
-                                  <p>{{ testimonial.content|safe|truncatechars:40}}</p>
+                                  <p>{{ testimonial.content|safe|striptags|truncatechars:40}}</p>
                               </div>
                           </div>
                           <hr>
