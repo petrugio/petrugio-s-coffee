@@ -85,6 +85,7 @@ def add_testimonial(request):
         if form.is_valid():
             testimonial = form.save(commit=False)
             testimonial.author = request.user
+            testimonial.status = 1
             testimonial.save()
             messages.success(request, 'Successfully added testimonial!')
             return redirect(reverse(
