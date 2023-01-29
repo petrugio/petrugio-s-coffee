@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Blog
 
 
@@ -40,7 +41,9 @@ class BlogLike(View):
         blog = get_object_or_404(Blog, slug=slug)
         if blog.likes.filter(id=request.user.id).exists():
             blog.likes.remove(request.user)
+            messages.success(request, 'Blog unliked!')
         else:
             blog.likes.add(request.user)
+            messages.success(request, 'Blog liked!')
 
         return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
