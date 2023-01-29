@@ -6,7 +6,7 @@ View GitHub repository
 <a href="https://github.com/petrugio/petrugio-s-coffee" target="_blank" rel="noopener">here</a>
 
 View the live project
-<a href="https://github.com/users/petrugio/projects/5/" target="_blank" rel="noopener">here</a>
+<a href="https://petrugio-s-coffee.herokuapp.com/" target="_blank" rel="noopener">here</a>
 
 # Table of Contents
 
@@ -14,13 +14,13 @@ View the live project
    * [Goals](#goals)
    * [Planing](#planning)
    * [User stories by Epic](#user-stories-by-epic)
-   * [Development](#development)
-* [Features](#features)
 * [Design](#design)
     * [Wireframes](#wireframes)
     * [Database](#database)
     * [Fonts](#fonts)
     * [Color Scheme](#color-scheme)
+* [Development](#development)
+* [Features](#features)
 * [Testing](#testing)
     * [Responsive Design](#responsive-design)
     * [Validator Testing](#validator-testing)
@@ -165,11 +165,11 @@ Bellow are screenshots of Agile planing, prioritization and development:
   | --- | ------------ |------------| ------------|
   | [#40](https://github.com/petrugio/petrugio-s-coffee/issues/40) | User | submit a message to the Store Manager/admin | I can be contacted back regarding my question/issue |
   | [#41](https://github.com/petrugio/petrugio-s-coffee/issues/41) | Store Manager/admin | view messages sent to me by users | I can attempt to solve the issue |
-<br>
-<hr>
-<br>
   
-## Development
+<hr>
+
+
+# Development
   
   <br>
 
@@ -177,6 +177,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 <details>
 <summary>Details</summary>
 <br>
+
 **Implementation:**
 
 - Install Django
@@ -190,6 +191,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 <details>
 <summary>Details</summary>
 <br>
+
 **Implementation:**
 
 - Create an env.py file to store the environment variables
@@ -206,8 +208,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 - Add the stripe details to the env.py file and to the Heroku config vars. Public key, secret key and wh-secret
 </details>
 
-### [#3](https://github.com/petrugio/petrugio-s-coffee/issues/3) [#60](https://github.com/petrugio/petrugio-s-coffee/issues/60) 
-### USER STORY: Home page, Add 400 and 500 error pages
+### [#3](https://github.com/petrugio/petrugio-s-coffee/issues/3) [#60](https://github.com/petrugio/petrugio-s-coffee/issues/60) USER STORY: Home page, Add 400 and 500 error pages
 <details>
 <summary>Details</summary>
 <br>
@@ -310,8 +311,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 </details>
 
-### [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9) [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10) [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11) [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12) 
-### USER STORY: Registration, Confirmation email, Login/logout, Password recovery
+### [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9) [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10) [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11) [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12) USER STORY: Registration, Confirmation email, Login/logout, Password recovery
 <details>
 <summary>Details</summary>
 <br>
@@ -432,8 +432,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 </details>
 
-### [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) 
-### USER STORY: View shopping basket, Update shopping basket, Remove from basket, Shopping basket total 
+### [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) USER STORY: View shopping basket, Update shopping basket, Remove from basket, Shopping basket total 
 <details>
 <summary>Details</summary>
 <br>
@@ -580,8 +579,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 </details>
 
-### [#29](https://github.com/petrugio/petrugio-s-coffee/issues/29) [#30](https://github.com/petrugio/petrugio-s-coffee/issues/30) [#32](https://github.com/petrugio/petrugio-s-coffee/issues/32)
-### USER STORY: Admin view placed orders, Admin edit placed orders, Admin delete placed orders
+### [#29](https://github.com/petrugio/petrugio-s-coffee/issues/29) [#30](https://github.com/petrugio/petrugio-s-coffee/issues/30) [#32](https://github.com/petrugio/petrugio-s-coffee/issues/32) USER STORY: Admin view placed orders, Admin edit placed orders, Admin delete placed orders
 
 <details>
 <summary>Details</summary>
@@ -598,7 +596,6 @@ Bellow are screenshots of Agile planing, prioritization and development:
 </details>
 
 ### [#33](https://github.com/petrugio/petrugio-s-coffee/issues/33) USER STORY: View blogs
-
 <details>
 <summary>Details</summary>
 <br>
@@ -614,8 +611,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
  
 </details>
 
-### [#34](https://github.com/petrugio/petrugio-s-coffee/issues/34) [#35](https://github.com/petrugio/petrugio-s-coffee/issues/35) 
-### USER STORY: View blog details, Like a blog post
+### [#34](https://github.com/petrugio/petrugio-s-coffee/issues/34) [#35](https://github.com/petrugio/petrugio-s-coffee/issues/35) USER STORY: View blog details, Like a blog post
 
 <details>
 <summary>Details</summary>
@@ -758,4 +754,553 @@ Bellow are screenshots of Agile planing, prioritization and development:
 **Implementation:**
 - When a bug, typo or an error was found it was fixed or attempted to be fixed
  
+</details>
+
+# Features
+
+### [#3](https://github.com/petrugio/petrugio-s-coffee/issues/3) [#60](https://github.com/petrugio/petrugio-s-coffee/issues/60) USER STORY: Home page, Add 400 and 500 error pages
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Home page](documentation/features/home_desk.jpg)
+
+**Tablet**
+
+![Home page tablet](documentation/features/home_tab.jpg)
+
+**Mobile**
+
+![Home page mobile](documentation/features/home_mob.jpg)
+
+**403**
+
+![403](documentation/features/403.jpg)
+
+**404**
+
+![404](documentation/features/404.jpg)
+
+</details>
+
+### [#4](https://github.com/petrugio/petrugio-s-coffee/issues/4) USER STORY: Navigation
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Nav](documentation/features/nav.jpg)
+
+**Tablet and Mobile**
+
+![Nav tablet and mobile](documentation/features/nav_tab.jpg)
+
+**Nav expanded**
+
+![Nav expand](documentation/features/nav_expand.jpg)
+
+**Nav deals**
+
+![Nav deals](documentation/features/nav_deals.jpg)
+
+**Nav account**
+
+![Nav account](documentation/features/nav_account.jpg)
+
+</details>
+
+### [#5](https://github.com/petrugio/petrugio-s-coffee/issues/5) USER STORY: Search
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Search](documentation/features/search_desk.jpg)
+
+**Tablet and Mobile**
+
+![Search tablet and mobile](documentation/features/search_tab.jpg)
+
+**Tablet and Mobile**
+
+![Search tablet and mobile](documentation/features/search_mob.jpg)
+
+</details>
+
+### [#6](https://github.com/petrugio/petrugio-s-coffee/issues/6) USER STORY: Testimonials section
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Testimonial section](documentation/features/test_sec_desk.jpg)
+
+**Tablet and Mobile**
+
+![Testimonial section](documentation/features/test_sec_tab.jpg)
+
+</details>
+
+### [#7](https://github.com/petrugio/petrugio-s-coffee/issues/7) USER STORY: Social media
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Footer](documentation/features/footer_desk.jpg)
+
+**Tablet and Mobile**
+
+![Footer](documentation/features/footer_tab.jpg)
+
+</details>
+
+### [#8](https://github.com/petrugio/petrugio-s-coffee/issues/8) USER STORY: Newsletter
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Footer](documentation/features/footer_desk.jpg)
+
+**Tablet and Mobile**
+
+![Footer](documentation/features/footer_tab.jpg)
+
+</details>
+
+### [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9) [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10) [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11) [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12) USER STORY: Registration, Confirmation email, Login/logout, Password recovery
+<details>
+<summary>Details</summary>
+<br>
+
+**Sign up**
+
+![Sign up](documentation/features/sign_up.jpg)
+
+**User register**
+
+![Image](documentation/features/email_register.jpg)
+
+**Got email**
+
+![Image](documentation/features/email_got.jpg)
+
+**Confirm email**
+
+![Image](documentation/features/email_confirm.jpg)
+
+**Confirm success**
+
+![Image](documentation/features/email_success.jpg)
+
+**Login**
+
+![Login](documentation/features/login.jpg)
+
+**Logout**
+
+![Logout](documentation/features/log_out.jpg)
+
+**Logged in user**
+
+![Logged in user](documentation/features/logged_in_user.jpg)
+
+**Logged in admin**
+
+![Logged in admin](documentation/features/logged_in_admin.jpg)
+
+</details>
+
+### [#13](https://github.com/petrugio/petrugio-s-coffee/issues/13) USER STORY: User profile
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/profile_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/profile_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/profile_mob.jpg)
+
+</details>
+
+### [#14](https://github.com/petrugio/petrugio-s-coffee/issues/14) USER STORY: Products
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/products_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/products_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/products_mob.jpg)
+
+</details>
+
+### [#15](https://github.com/petrugio/petrugio-s-coffee/issues/15) USER STORY: Sort functionality
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Sort**
+
+![Image](documentation/features/sorting.jpg)
+
+</details>
+
+### [#16](https://github.com/petrugio/petrugio-s-coffee/issues/16) USER STORY: Product details
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/products_detail_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/products_detail_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/products_mob.jpg)
+
+</details>
+
+### [#17](https://github.com/petrugio/petrugio-s-coffee/issues/17) USER STORY: Product CRUD functionality
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Product add**
+
+![Image](documentation/features/pr_add_desk.jpg)
+
+**Product add**
+
+![Image](documentation/features/pr_add_tab.jpg)
+
+**Product add**
+
+![Image](documentation/features/pr_add_mob.jpg)
+
+**Product edit**
+
+![Image](documentation/features/pr_edit.jpg)
+
+**Product delete**
+
+![Image](documentation/features/pr_del.jpg)
+
+</details>
+
+### [#18](https://github.com/petrugio/petrugio-s-coffee/issues/18) USER STORY: Add to basket
+<details>
+<summary>Details</summary>
+<br>
+
+**Basket Add**
+
+![Image](documentation/features/basket_add.jpg)
+
+**Basket Added**
+
+![Image](documentation/features/basket_added.jpg)
+
+
+</details>
+
+### [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) USER STORY: View shopping basket, Update shopping basket, Remove from basket, Shopping basket total 
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/basket_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/basket_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/basket_mob.jpg)
+
+**Basket update**
+
+![Image](documentation/features/basket_update.jpg)
+
+**Basket updated**
+
+![Image](documentation/features/basket_updated.jpg)
+
+**Basket remove**
+
+![Image](documentation/features/basket_remove.jpg)
+
+**Basket removed**
+
+![Image](documentation/features/basket_removed.jpg)
+
+</details>
+
+### [#23](https://github.com/petrugio/petrugio-s-coffee/issues/23) USER STORY: Basket notification
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Mini basket**
+
+![Image](documentation/features/mini_basket.jpg)
+
+</details>
+
+### [#24](https://github.com/petrugio/petrugio-s-coffee/issues/24) USER STORY: Notifications
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Success message**
+
+![Image](documentation/features/login_msg.jpg)
+![Image](documentation/features/log_out_msg.jpg)
+![Image](documentation/features/t_add_msg.jpg)
+![Image](documentation/features/t_rem_msg.jpg)
+
+**Error message**
+
+![Image](documentation/features/msg_error.jpg)
+
+</details>
+
+### [#25](https://github.com/petrugio/petrugio-s-coffee/issues/25) USER STORY: Contact details and delivery address
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/ch_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/ch_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/ch_mob.jpg)
+
+</details>
+
+### [#26](https://github.com/petrugio/petrugio-s-coffee/issues/26) [#27](https://github.com/petrugio/petrugio-s-coffee/issues/28) [#28](https://github.com/petrugio/petrugio-s-coffee/issues/28) USER STORY: Checkout/pay, Checkout confirmation, Checkout confirmation email
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Checkout/pay**
+
+![Image](documentation/features/pay.jpg)
+
+**Pay overlay**
+
+![Image](documentation/features/pay_overlay.jpg)
+
+**Pay confirm**
+
+![Image](documentation/features/pay_confirm.jpg)
+
+**Pay confirmation email**
+
+![Image](documentation/features/pay_email.jpg)
+
+</details>
+
+### [#29](https://github.com/petrugio/petrugio-s-coffee/issues/29) [#30](https://github.com/petrugio/petrugio-s-coffee/issues/30) [#32](https://github.com/petrugio/petrugio-s-coffee/issues/32) USER STORY: Admin view placed orders, Admin edit placed orders, Admin delete placed orders
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Admin view all orders**
+
+![Image](documentation/features/admin_order.jpg)
+
+**Admin order view**
+
+![Image](documentation/features/admin_order_view.jpg)
+
+**Admin order edit**
+
+![Image](documentation/features/admin_order_edit.jpg)
+
+**Admin order edited**
+
+![Image](documentation/features/admin_order_edited.jpg)
+
+**Admin order delete**
+
+![Image](documentation/features/admin_order_delete.jpg)
+
+**Admin order delete confirm**
+
+![Image](documentation/features/admin_order_delete_c.jpg)
+
+**Admin order deleted**
+
+![Image](documentation/features/admin_order_deleted.jpg)
+
+</details>
+
+### [#33](https://github.com/petrugio/petrugio-s-coffee/issues/33) USER STORY: View blogs
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/blog_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/blog_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/blog_mob.jpg)
+
+</details>
+
+### [#34](https://github.com/petrugio/petrugio-s-coffee/issues/34) [#35](https://github.com/petrugio/petrugio-s-coffee/issues/35) USER STORY: View blog details, Like a blog post
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/blog_detail_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/blog_detail_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/blog_detail_mob.jpg)
+
+**Blog press like**
+
+![Image](documentation/features/blog_press_like.jpg)
+
+**Blog like message**
+
+![Image](documentation/features/blog_like.jpg)
+
+**Blog unlike message**
+
+![Image](documentation/features/blog_unlike.jpg)
+
+</details>
+
+### [#36](https://github.com/petrugio/petrugio-s-coffee/issues/36) USER STORY: Admin CRUD blog post
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Admin blog view**
+
+![Image](documentation/features/admin_blog.jpg)
+
+**Admin blog add**
+
+![Image](documentation/features/admin_blog_add.jpg)
+
+**Admin blog edit**
+
+![Image](documentation/features/admin_blog_edit.jpg)
+
+**Admin blog delete confirm**
+
+![Image](documentation/features/admin_blog_delete.jpg)
+
+**Admin blog deleted**
+
+![Image](documentation/features/admin_blog_deleted.jpg)
+
+</details>
+
+### [#37](https://github.com/petrugio/petrugio-s-coffee/issues/37) USER STORY: View testimonials
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/testimonials_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/testimonials_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/testimonials_mob.jpg)
+
+</details>
+
+### [#38](https://github.com/petrugio/petrugio-s-coffee/issues/38) USER STORY: Users CRUD testimonials
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Add testimonial Desktop**
+
+![Image](documentation/features/t_add_desk.jpg)
+
+**Add testimonial Tablet**
+
+![Image](documentation/features/t_add_tab.jpg)
+
+**Add testimonial Mobile**
+
+![Image](documentation/features/t_add_mob.jpg)
+
+**Add testimonial message**
+
+![Image](documentation/features/t_add_msg.jpg)
+
+
+
+
 </details>
