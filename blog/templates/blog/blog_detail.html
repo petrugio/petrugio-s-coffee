@@ -29,8 +29,7 @@
                     </div>
                 </div>
                 <p class="small text-muted text-center">Logged in users can like a blogpost</p>
-                <div class="text-right pr-3">
-                    <strong>
+                <div class="text-right pr-3 font-weight-bold">
                     {% if user.is_authenticated %}
                     <form  action="{% url 'blog_like' blog.slug %}" method="POST">
                         {% csrf_token %}
@@ -47,7 +46,7 @@
                             <p><i class="far fa-heart text-right"></i> {{ blog.number_of_likes }}</p>
                         {% endif %}
                     {% endif %}
-                    </strong>
+                   
                 </div>
             </div>   
         </div>
