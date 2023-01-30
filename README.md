@@ -26,10 +26,12 @@ View the live project
     * [Validator Testing](#validator-testing)
         * [HTML5](#html5)
         * [CSS3](#css3)
-        * [Javascript](#javascript)
+        * [JavaScript](#javascript)
         * [Python](#python)
         * [Lighthouse](#lighthouse)
         * [Accessibility](#accessibility)
+    * [Automated testing ](#automated-testing)
+    * [Database testing ](#database-testing)
     * [Functional Testing ](#functional-testing)
     * [Browser Testing](#browser-testing)
 * [Bugs](#bugs)
@@ -168,10 +170,154 @@ Bellow are screenshots of Agile planing, prioritization and development:
   
 <hr>
 
+# Design
+
+## Wireframes
+Wireframes were made using [Balsamiq](https://balsamiq.com/).
+During development effort was put in to make the final website look and function as described in wireframe.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/wireframes/Home.png)
+
+**Products**
+
+![Image](documentation/wireframes/Products.png)
+
+**Product detail**
+
+![Image](documentation/wireframes/Product_detail.png)
+
+**Basket**
+
+![Image](documentation/wireframes/Basket.png)
+
+**Checkout**
+
+![Image](documentation/wireframes/Checkout.png)
+
+**Order Confirmation**
+
+![Image](documentation/wireframes/Order_Confirmation.png)
+
+**Register**
+
+![Image](documentation/wireframes/Register.png)
+
+**Login**
+
+![Image](documentation/wireframes/Login.png)
+
+**Logout**
+
+![Image](documentation/wireframes/Logout.png)
+
+**Profile**
+
+![Image](documentation/wireframes/Profile.png)
+
+**Product management**
+
+![Image](documentation/wireframes/Product_management.png)
+
+**Contact**
+
+![Image](documentation/wireframes/Contact.png)
+
+**Blog**
+
+![Image](documentation/wireframes/Blog.png)
+
+**Blog detail**
+
+![Image](documentation/wireframes/Blog_detail.png)
+
+**Testimonials**
+
+![Image](documentation/wireframes/Testimonials.png)
+
+**Add Testimonial**
+
+![Image](documentation/wireframes/Add_Testimonial.png)
+
+**404**
+
+![Image](documentation/wireframes/404.png)
+
+</details> 
+
+<br>
+
+## Database
+
+Custom data models were build for this project.
+Bellow is the data model and Entity Relationship Diagram created with [DBeaver](https://dbeaver.io/) Universal Database Tool:
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Database schema in relation with logged in user**
+
+![ER Diagram](documentation/db/schema.jpg)
+
+**Allauth** library was used for the user authentication system, which utilities the built in Django User Model removed the need to build a custom User model for user authentication.
+
+![image](documentation/db/allauth.jpg)
+
+**Products** app model was adapted and modified for this project from Boutique Ado walk trough project
+
+![Image](documentation/db/model_products.jpg)
+![Image](documentation/db/model_products1.jpg)
+
+**Checkout** app model
+
+![Image](documentation/db/model_checkout.jpg)
+
+**Profile** app model
+
+![Image](documentation/db/model_pofile.jpg)
+
+**Blog** app model was build for this project to provide user useful information related to coffee, coffee products, coffee recipes. Logged in users have the ability to like a blog.
+
+![Image](documentation/db/model_blog.jpg)
+![Image](documentation/db/model_blog1.jpg)
+![Image](documentation/db/model_blog2.jpg)
+
+
+**Testimonials** app model was build for this project to provide user the ability to post a testimonial for other users to see. Logged in users that already made an order have the ability to post a testimonial.
+
+![Image](documentation/db/model_testimonial.jpg)
+![Image](documentation/db/model_testimonial1.jpg)
+
+**Contact** app model was build for this project to provide user the ability to contact site Manager/admin. Both users and logged in users have the ability to write a message trough the contact app. 
+
+![Image](documentation/db/model_contact.jpg)
+![Image](documentation/db/model_contact1.jpg)
+
+</details> 
+
+## Fonts
+Google font [Bungee+Shade](https://fonts.google.com/specimen/Bungee+Shade) was used for the website. 
+
+## Color Scheme
+Contrast checker tool from [monsido.com](https://monsido.com/tools/contrast-checker) was  used to find a good contrast ratio.
+
+<details>
+<summary>Details</summary>
+<br>
+
+![Image](documentation/fonts/font1.jpg)
+![Image](documentation/fonts/font2.jpg)
+![Image](documentation/fonts/font3.jpg)
+
+</details>
 
 # Development
-  
-  <br>
 
 ### [#1](https://github.com/petrugio/petrugio-s-coffee/issues/1) Issue: Install Django and dependencies (libraries)
 <details>
@@ -1402,3 +1548,221 @@ Bellow are screenshots of Agile planing, prioritization and development:
 ![Image](documentation/features/admin_msg_crud.jpg)
 
 </details>
+
+# Testing
+
+## Responsive Design
+[Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) and [Pesticide Chrome extension](https://chrome.google.com/webstore/detail/pesticide-for-chrome-with/neonnmencpneifkhlmhmfhfiklgjmloi) was regularly used during development to test responsiveness on different  screen sizes.   
+To make the website responsive [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) and CSS was used.
+Responsiveness for different screen sizes can be seen in the features section above. 
+
+## Validator Testing
+
+### HTML5
+Code passed official [W3C Validator testing](https://validator.w3.org/#validate_by_uri).
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/w3c/home.jpg)
+
+**Sign up**
+
+![Image](documentation/testing/w3c/signup.jpg)
+
+**Login**
+
+![Image](documentation/testing/w3c/login.jpg)
+
+**Products**
+
+![Image](documentation/testing/w3c/p.jpg)
+
+**Product detail**
+
+![Image](documentation/testing/w3c/p_detail.jpg)
+
+**Blog**
+
+![Image](documentation/testing/w3c/b.jpg)
+
+**Blog detail**
+
+![Image](documentation/testing/w3c/b_detail.jpg)
+
+**Testimonials**
+
+![Image](documentation/testing/w3c/t.jpg)
+
+**Testimonial detail**
+
+![Image](documentation/testing/w3c/t_detail.jpg)
+
+**Contact**
+
+![Image](documentation/testing/w3c/contact.jpg)
+
+<br>
+</details>
+
+### CSS3
+
+Css passed official [W3C Validator testing](https://jigsaw.w3.org/css-validator/). There were no mistakes in my CSS.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+By URI
+
+![CSS link](documentation/testing/w3c/css.jpg)
+
+
+<br>
+</details>
+
+### Javascript
+
+The alert function was tested with [jshint.com](https://jshint.com/). No errors found.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Stripe-elements.js**
+
+![Image](documentation/testing/js/s.jpg)
+
+**Quantity-input-script.js**
+
+![Image](documentation/testing/js/q.jpg)
+
+**Summernote**
+
+![Image](documentation/testing/js/su.jpg)
+
+<br>
+</details>
+
+### Python
+
+The code was tested with [pycodestyle](https://pypi.org/project/pycodestyle/) extension in Gitpod. No mistakes found.
+Few generic Django lines of code are showing a warning of "Line too long". When i tied to make the lines shorter by indenting them with \ or "" python methods - Django breaks and cannot run any code.  
+Since this is generic Django code it was left as it is.
+
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Setting.py**
+
+![Python](documentation/testing/python/pycodestyle.jpg)
+
+<br>
+</details>
+
+### Automated testing
+As the time permitted some automated testing was performed to check if pages load, give a 200 or 404 response
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/homepage_loads.jpg)
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/products_loads.jpg)
+
+**Profile**
+
+![Image](documentation/testing/code_testing/profile_loads.jpg)
+
+**Basket**
+
+![Image](documentation/testing/code_testing/basket_loads.jpg)
+
+<br>
+</details>
+
+### Lighthouse
+
+Pages were tested with [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) using the [Lighthouse](https://developers.google.com/web/tools/lighthouse) resource.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+![Image](documentation/testing/lighthouse/home.jpg)
+![Image](documentation/testing/lighthouse/products.jpg)
+![Image](documentation/testing/lighthouse/blog.jpg)
+![Image](documentation/testing/lighthouse/b_detail.jpg)
+![Image](documentation/testing/lighthouse/testimonials.jpg)
+![Image](documentation/testing/lighthouse/t_detail.jpg)
+![Image](documentation/testing/lighthouse/contact.jpg)
+
+<br>
+</details>
+
+### Accessibility
+
+Accessibility was tested during development using [Wave Chrome extension](https://wave.webaim.org/) and after final deployment was tested with **accessibilitytest.org**
+
+[Accessibility test result ](https://accessibilitytest.org/results/_ws0HhePZuCx)
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+![Accessibility score](documentation/testing/accessability/accessibility_score.jpg)
+![Robots](documentation/testing/accessability/robots.jpg)
+
+
+<br>
+</details>
+
+## Automated testing
+As the time permitted some automated testing was performed to check if pages load, give a 200 or 404 response
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/homepage_loads.jpg)
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/products_loads.jpg)
+
+**Profile**
+
+![Image](documentation/testing/code_testing/profile_loads.jpg)
+
+**Basket**
+
+![Image](documentation/testing/code_testing/basket_loads.jpg)
+
+<br>
+</details>
+
+## Database testing
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Profile gets saved to database**
+
+![Image](documentation/testing/code_testing/profile_to_database.jpg)
+
+</details>
+
+## Functional Testing
