@@ -388,6 +388,13 @@ input[name='q']::placeholder {
         height: auto;
              
     }
+    #nav_ul {
+        width: calc(100% - 50px);
+    }
+
+   .dropdown-menu.my_profile.border-0.show {
+        left:-40px;
+    }
 }
 
 .display-4.logo-font.text-black {
