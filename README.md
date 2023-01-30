@@ -874,6 +874,19 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 ![Footer](documentation/features/footer_tab.jpg)
 
+**Newsletter**
+
+![Footer](documentation/features/newsletter.jpg)
+
+**Newsletter subscribed**
+
+![Footer](documentation/features/newsletter_subscribed.jpg)
+
+**Newsletter subscribed mailchimp**
+
+![Footer](documentation/features/newsletter_chimp.jpg)
+
+
 </details>
 
 ### [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9) [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10) [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11) [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12) USER STORY: Registration, Confirmation email, Login/logout, Password recovery
@@ -1300,7 +1313,92 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 ![Image](documentation/features/t_add_msg.jpg)
 
+**Testimonial buttons**
 
+![Image](documentation/features/t_buttons.jpg)
 
+**Testimonial edit**
+
+![Image](documentation/features/t_edit.jpg)
+
+**Testimonial edited**
+
+![Image](documentation/features/t_edited.jpg)
+
+**Testimonial edit message**
+
+![Image](documentation/features/t_edit_msg.jpg)
+
+**Testimonial delete message**
+
+![Image](documentation/features/t_rem_msg.jpg)
+
+</details>
+
+### [#39](https://github.com/petrugio/petrugio-s-coffee/issues/39) USER STORY: Admin delete testimonials
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Admin Testimonial delete**
+
+![Image](documentation/features/t_admin_rem.jpg)
+
+**Add testimonial Django Admin**
+
+![Image](documentation/features/t_admin_add.jpg)
+
+**Testimonial edit Django Admin**
+
+![Image](documentation/features/t_admin_edit.jpg)
+
+**Testimonial delete message**
+
+![Image](documentation/features/t_admin_del.jpg)
+
+</details>
+
+### [#40](https://github.com/petrugio/petrugio-s-coffee/issues/40) USER STORY: User submit message
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Desktop**
+
+![Image](documentation/features/contact_desk.jpg)
+
+**Tablet**
+
+![Image](documentation/features/contact_tab.jpg)
+
+**Mobile**
+
+![Image](documentation/features/contact_mob.jpg)
+
+**Sent message**
+
+![Image](documentation/features/contact_submit.jpg)
+
+**Sent message success**
+
+![Image](documentation/features/contact_msg.jpg)
+
+</details>
+
+### [#41](https://github.com/petrugio/petrugio-s-coffee/issues/41) USER STORY: Admin view messages
+
+<details>
+<summary>Details</summary>
+<br>
+
+**Admin view all messages**
+
+![Image](documentation/features/admin_msg.jpg)
+
+**Admin CRUD message**
+
+![Image](documentation/features/admin_msg_crud.jpg)
 
 </details>
