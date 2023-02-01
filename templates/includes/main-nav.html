@@ -1,3 +1,4 @@
+<!-- Code block for displaying main navigation -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-lg-none">
@@ -5,6 +6,7 @@
                 Home
             </a>
         </li>
+        <!-- All Products dropdown menu -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
@@ -29,7 +31,7 @@
                 <a href="{% url 'products' %}?intensity=Intense" class="dropdown-item">Intense</a>
             </div>
         </li>
-
+         <!-- Deals dropdown menu -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black  mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Deals
@@ -41,19 +43,19 @@
                 <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
-
+         <!-- Blog app link -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog' %}" id="blog">
             Blog
             </a>
         </li>
-
+        <!-- Testimonials app link -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'testimonials' %}" id="testimonials">
             Testimonials
             </a>
         </li>
-
+        <!-- Contact app link -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'contact' %}" id="contact">
             Contact

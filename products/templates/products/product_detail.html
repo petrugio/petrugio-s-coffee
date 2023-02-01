@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Code block for displaying current site's sub-page -->
 {% block extra_title %}| {{ product.name }}{% endblock %}
 
+<!-- Code block for displaying the product detail page -->
 {% block content %}
     <div class="container-fluid main-container">
         <div class="row">
@@ -102,6 +104,7 @@
     </div>
 {% endblock %} 
 
+<!-- JS code for managing quantity input form on the product detail page -->
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %} 

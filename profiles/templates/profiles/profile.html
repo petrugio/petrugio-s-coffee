@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
+<!-- Code block for displaying current site's sub-page -->
 {% block extra_title %}| My Profile{% endblock %}
 
+<!-- Code block for displaying the profile page -->
 {% block content %}
     <div class="container main-container mb-2">
         <div class="row">
@@ -67,6 +69,7 @@
     </div>
 {% endblock %}
 
+<!-- JS code for managing countries form field -->
 {% block postloadjs %}
     {{ block.super }}
     <script src="{% static 'profiles/js/countryfield.js' %}"></script>
