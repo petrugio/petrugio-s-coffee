@@ -8,6 +8,15 @@ View GitHub repository
 View the live project
 <a href="https://petrugio-s-coffee.herokuapp.com/" target="_blank" rel="noopener">here</a>
 
+**Stripe test cards for checkout** 
+
+- The card payment succeeds and doesn’t require authentication.
+  * Fill out the credit card form using the credit card number 4242 4242 4242 4242 with any expiration, CVC, and postal code.
+- The card payment requires authentication.	
+  * Fill out the credit card form using the credit card number 4000 0025 0000 3155 with any expiration, CVC, and postal code.
+  
+  You can read more about <a href="https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=elements#web-test-the-integration" target="_blank" rel="noopener">here</a>
+
 # Table of Contents
 
 * [User Experience](#user-experience)
@@ -21,20 +30,25 @@ View the live project
     * [Color Scheme](#color-scheme)
 * [Development](#development)
 * [Features](#features)
+* [Social Media Marketing](#social-media-marketing)
 * [Testing](#testing)
     * [Responsive Design](#responsive-design)
     * [Validator Testing](#validator-testing)
         * [HTML5](#html5)
         * [CSS3](#css3)
-        * [Javascript](#javascript)
+        * [JavaScript](#javascript)
         * [Python](#python)
         * [Lighthouse](#lighthouse)
         * [Accessibility](#accessibility)
-    * [Functional Testing ](#functional-testing)
+    * [Automated testing](#automated-testing)
+    * [Database testing](#database-testing)
+    * [Stripe testing](#stripe-testing)
+    * [Functional Testing](#functional-testing)
     * [Browser Testing](#browser-testing)
 * [Bugs](#bugs)
+    * [During development](#during-development)
     * [Fixed Bugs](#fixed-bugs)
-    * [Bug fix during testing](#bug-fix-during-testing)
+    * [Bugs fix during testing](#bugs-fix-during-testing)
     * [Unfixed Bugs](#unfixed-bugs)
 * [Deployment](#deployment)
     * [Heroku](#heroku)
@@ -42,7 +56,6 @@ View the live project
     * [How to Clone this repository](#how-to-clone-this-repository)
 * [Technologies used](#technologies-used)
     * [Frameworks](#frameworks)
-    * [Tools and tips](#tools-and-tips)
 * [Credits](#credits)
 * [Contact](#contact)
 * [Acknowledgments](#acknowledgments)
@@ -54,7 +67,6 @@ View the live project
 ## Goals
 
 The goal of this website is to provide a pleasant way for interested customers to buy coffee at competitive prices, read blogs about coffee and coffee recipes.
-
 
 ## Planning 
 
@@ -90,88 +102,232 @@ Bellow are screenshots of Agile planing, prioritization and development:
 
 - ### EPIC - Home App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#3](https://github.com/petrugio/petrugio-s-coffee/issues/3) | User | view the home page | I can find out what potential benefit it can offer |
-  | [#4](https://github.com/petrugio/petrugio-s-coffee/issues/4) | User | navigate the site | I can explore the site pages |
-  | [#5](https://github.com/petrugio/petrugio-s-coffee/issues/5) | User | search the site | I can quickly find what I'm looking for, alternative way of looking for items |
-  | [#6](https://github.com/petrugio/petrugio-s-coffee/issues/6) | User | see recent testimonials from previous customers/users | I can decide if the products might satisfy/suit me |
-  | [#7](https://github.com/petrugio/petrugio-s-coffee/issues/7) | User | find links to social media sites | I can engage with this shop and share my experience |
-  | [#8](https://github.com/petrugio/petrugio-s-coffee/issues/8) | User | subscribe to a newsletter | I can receive news and deals from the shop |
-  | [#24](https://github.com/petrugio/petrugio-s-coffee/issues/24) | User | view feedback notifications | I can be sure the action was successful |
+| No.                                                            | As a **(role)**   | I can **(capability)**                                | so that **(received benefit)**                                                |
+|----------------------------------------------------------------|-------------------|-------------------------------------------------------|-------------------------------------------------------------------------------|
+| [#3](https://github.com/petrugio/petrugio-s-coffee/issues/3)   | User              | view the home page                                    | I can find out what potential benefit it can offer                            |
+| [#4](https://github.com/petrugio/petrugio-s-coffee/issues/4)   | User              | navigate the site                                     | I can explore the site pages                                                  |
+| [#5](https://github.com/petrugio/petrugio-s-coffee/issues/5)   | User              | search the site                                       | I can quickly find what I'm looking for, alternative way of looking for items |
+| [#6](https://github.com/petrugio/petrugio-s-coffee/issues/6)   | User              | see recent testimonials from previous customers/users | I can decide if the products might satisfy/suit me                            |
+| [#7](https://github.com/petrugio/petrugio-s-coffee/issues/7)   | User              | find links to social media sites                      | I can engage with this shop and share my experience                           |
+| [#8](https://github.com/petrugio/petrugio-s-coffee/issues/8)   | User              | subscribe to a newsletter                             | I can receive news and deals from the shop                                    |
+| [#24](https://github.com/petrugio/petrugio-s-coffee/issues/24) | User              | view feedback notifications                           | I can be sure the action was successful                                       |
 
 - ### EPIC - Profile App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9) | User | register for an account | I can have a personal account and be able to view my profile |
-  | [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10) | User | receive a confirmation email after registering | I can make sure my account has been created |
-  | [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11) | User | login/logout of my account | I can have secure access to my profile |
-  | [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12) | User | recover my password | I can recover my password in case I forget it |
-  | [#13](https://github.com/petrugio/petrugio-s-coffee/issues/13) | User | have a user profile | I can see my orders and personal information |
+| No.                                                                  | As a **(role)** | I can **(capability)**                         | so that **(received benefit)**                               |
+|----------------------------------------------------------------------|-----------------|------------------------------------------------|--------------------------------------------------------------|
+| [#9](https://github.com/petrugio/petrugio-s-coffee/issues/9)         | User            | register for an account                        | I can have a personal account and be able to view my profile |
+| [#10](https://github.com/petrugio/petrugio-s-coffee/issues/10)       | User            | receive a confirmation email after registering | I can make sure my account has been created                  |
+| [#11](https://github.com/petrugio/petrugio-s-coffee/issues/11)       | User            | login/logout of my account                     | I can have secure access to my profile                       |
+| [#12](https://github.com/petrugio/petrugio-s-coffee/issues/12)       | User            | recover my password                            | I can recover my password in case I forget it                |
+| [#13](https://github.com/petrugio/petrugio-s-coffee/issues/13)       | User            | have a user profile                            | I can see my orders and personal information                 |
 
 - ### EPIC - Products App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#14](https://github.com/petrugio/petrugio-s-coffee/issues/14) | User | view the products | I can buy them if interested |
-  | [#15](https://github.com/petrugio/petrugio-s-coffee/issues/15) | User | sort available products by different criteria | I can easily find the products matching my criteria |
-  | [#16](https://github.com/petrugio/petrugio-s-coffee/issues/16) | User | see an individual page for each product | I can see all the details of this product |
-  | [#17](https://github.com/petrugio/petrugio-s-coffee/issues/17) | Store Manager/admin | create, read, update and delete (CRUD functionality) a product | I can can sell it, update it or stop selling it on the website |
+| No.                                                            | As a **(role)**     | I can **(capability)**                                         | so that **(received benefit)**                                 |
+|----------------------------------------------------------------|---------------------|----------------------------------------------------------------|----------------------------------------------------------------|
+| [#14](https://github.com/petrugio/petrugio-s-coffee/issues/14) | User                | view the products                                              | I can buy them if interested                                   |
+| [#15](https://github.com/petrugio/petrugio-s-coffee/issues/15) | User                | sort available products by different criteria                  | I can easily find the products matching my criteria            |
+| [#16](https://github.com/petrugio/petrugio-s-coffee/issues/16) | User                | see an individual page for each product                        | I can see all the details of this product                      |
+| [#17](https://github.com/petrugio/petrugio-s-coffee/issues/17) | Store Manager/admin | create, read, update and delete (CRUD functionality) a product | I can can sell it, update it or stop selling it on the website |
   
 - ### EPIC - Basket App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#18](https://github.com/petrugio/petrugio-s-coffee/issues/18) | User | add products to an online shopping basket | I can purchase multiple items |
-  | [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) | User | see all the items in my shopping basket | I can double check if I added the needed quantity and sizes |
-  | [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) | User | adjust the quantity of any product in my basket | I can buy the right amount |
-  | [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) | User | remove products from my basket | I can choose not to buy them |
-  | [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) | User | see the total value of my shopping basket | I can decide if it fits my budget |
-  | [#23](https://github.com/petrugio/petrugio-s-coffee/issues/23) | User | see a notification when adding to/updating/removing from shopping basket | I can be sure the action was successful | 
+| No.                                                            | As a **(role)** | I can **(capability)**                                                   | so that **(received benefit)**                              |
+|----------------------------------------------------------------|-----------------|--------------------------------------------------------------------------|-------------------------------------------------------------|
+| [#18](https://github.com/petrugio/petrugio-s-coffee/issues/18) | User            | add products to an online shopping basket                                | I can purchase multiple items                               |
+| [#19](https://github.com/petrugio/petrugio-s-coffee/issues/19) | User            | see all the items in my shopping basket                                  | I can double check if I added the needed quantity and sizes |
+| [#20](https://github.com/petrugio/petrugio-s-coffee/issues/20) | User            | adjust the quantity of any product in my basket                          | I can buy the right amount                                  |
+| [#21](https://github.com/petrugio/petrugio-s-coffee/issues/21) | User            | remove products from my basket                                           | I can choose not to buy them                                |
+| [#22](https://github.com/petrugio/petrugio-s-coffee/issues/22) | User            | see the total value of my shopping basket                                | I can decide if it fits my budget                           |
+| [#23](https://github.com/petrugio/petrugio-s-coffee/issues/23) | User            | see a notification when adding to/updating/removing from shopping basket | I can be sure the action was successful                     | 
 
 - ### EPIC - Checkout App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#25](https://github.com/petrugio/petrugio-s-coffee/issues/25) | User | fill in my contact details and delivery address | I can get products delivered to desired address |
-  | [#26](https://github.com/petrugio/petrugio-s-coffee/issues/26) | User | safely checkout/pay for the products in my shopping basket | I can ensure my financial details are safe |
-  | [#27](https://github.com/petrugio/petrugio-s-coffee/issues/27) | User | view an order confirmation after checkout | I can be sure the order and payment were successful |
-  | [#28](https://github.com/petrugio/petrugio-s-coffee/issues/28) | User | receive an email confirmation after purchasing | I can have a record of the transaction |
-  | [#29](https://github.com/petrugio/petrugio-s-coffee/issues/29) | Store Manager/admin | view placed orders and delivery details | I can ship the products to the customers at the address provided |
-  | [#30](https://github.com/petrugio/petrugio-s-coffee/issues/30) | Store Manager/admin | edit placed orders and delivery details | I can modify/update orders if needed |
-  | [#32](https://github.com/petrugio/petrugio-s-coffee/issues/31) | Store Manager/admin | delete placed orders | I can delete an order if a customer decides to cancel the order |
+| No.                                                            | As a **(role)**     | I can **(capability)**                                     | so that **(received benefit)**                                   |
+|----------------------------------------------------------------|---------------------|------------------------------------------------------------|------------------------------------------------------------------|
+| [#25](https://github.com/petrugio/petrugio-s-coffee/issues/25) | User                | fill in my contact details and delivery address            | I can get products delivered to desired address                  |
+| [#26](https://github.com/petrugio/petrugio-s-coffee/issues/26) | User                | safely checkout/pay for the products in my shopping basket | I can ensure my financial details are safe                       |
+| [#27](https://github.com/petrugio/petrugio-s-coffee/issues/27) | User                | view an order confirmation after checkout                  | I can be sure the order and payment were successful              |
+| [#28](https://github.com/petrugio/petrugio-s-coffee/issues/28) | User                | receive an email confirmation after purchasing             | I can have a record of the transaction                           |
+| [#29](https://github.com/petrugio/petrugio-s-coffee/issues/29) | Store Manager/admin | view placed orders and delivery details                    | I can ship the products to the customers at the address provided |
+| [#30](https://github.com/petrugio/petrugio-s-coffee/issues/30) | Store Manager/admin | edit placed orders and delivery details                    | I can modify/update orders if needed                             |
+| [#32](https://github.com/petrugio/petrugio-s-coffee/issues/31) | Store Manager/admin | delete placed orders                                       | I can delete an order if a customer decides to cancel the order  |
 
 - ### EPIC - Blog App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#33](https://github.com/petrugio/petrugio-s-coffee/issues/33) | User | view the blogs | I may decide to read a blog post if interested |
-  | [#34](https://github.com/petrugio/petrugio-s-coffee/issues/34) | User | view the blog details | I can read the whole blog post |
-  | [#35](https://github.com/petrugio/petrugio-s-coffee/issues/35) | User | 'like' a blog post | users/the author of the blog will see the impressions |
-  | [#36](https://github.com/petrugio/petrugio-s-coffee/issues/36) | Store Manager/admin | create, read, update and delete (CRUD functionality) a blog post | the users of the site can read it or no longer read it |
+| No.                                                            | As a **(role)**     | I can **(capability)**                                           | so that **(received benefit)**                         |
+|----------------------------------------------------------------|---------------------|------------------------------------------------------------------|--------------------------------------------------------|
+| [#33](https://github.com/petrugio/petrugio-s-coffee/issues/33) | User                | view the blogs                                                   | I may decide to read a blog post if interested         |
+| [#34](https://github.com/petrugio/petrugio-s-coffee/issues/34) | User                | view the blog details                                            | I can read the whole blog post                         |
+| [#35](https://github.com/petrugio/petrugio-s-coffee/issues/35) | User                | 'like' a blog post                                               | users/the author of the blog will see the impressions  |
+| [#36](https://github.com/petrugio/petrugio-s-coffee/issues/36) | Store Manager/admin | create, read, update and delete (CRUD functionality) a blog post | the users of the site can read it or no longer read it |
 
 - ### EPIC - Testimonials App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#37](https://github.com/petrugio/petrugio-s-coffee/issues/37) | User | see all testimonials from previous customers/users | I can decide if the products might interest me |
-  | [#38](https://github.com/petrugio/petrugio-s-coffee/issues/38) | User | create, read, update and delete (CRUD functionality) testimonials for the products I bought | I can share or stop sharing my experience with other customers |
-  | [#39](https://github.com/petrugio/petrugio-s-coffee/issues/39) | Store Manager/admin | delete a testimonial | I can have a testimonial deleted if needed|
+| No.                                                            | As a **(role)**     | I can **(capability)**                                                                      | so that **(received benefit)**                                 |
+|----------------------------------------------------------------|---------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| [#37](https://github.com/petrugio/petrugio-s-coffee/issues/37) | User                | see all testimonials from previous customers/users                                          | I can decide if the products might interest me                 |
+| [#38](https://github.com/petrugio/petrugio-s-coffee/issues/38) | User                | create, read, update and delete (CRUD functionality) testimonials for the products I bought | I can share or stop sharing my experience with other customers |
+| [#39](https://github.com/petrugio/petrugio-s-coffee/issues/39) | Store Manager/admin | delete a testimonial                                                                        | I can have a testimonial deleted if needed                     |
 
 - ### EPIC - Contact App
 
-  | No. | As a **(role)** | I can **(capability)** | so that **(received benefit)** |
-  | --- | ------------ |------------| ------------|
-  | [#40](https://github.com/petrugio/petrugio-s-coffee/issues/40) | User | submit a message to the Store Manager/admin | I can be contacted back regarding my question/issue |
-  | [#41](https://github.com/petrugio/petrugio-s-coffee/issues/41) | Store Manager/admin | view messages sent to me by users | I can attempt to solve the issue |
+| No.                                                            | As a **(role)**     | I can **(capability)**                      | so that **(received benefit)**                      |
+|----------------------------------------------------------------|---------------------|---------------------------------------------|-----------------------------------------------------|
+| [#40](https://github.com/petrugio/petrugio-s-coffee/issues/40) | User                | submit a message to the Store Manager/admin | I can be contacted back regarding my question/issue |
+| [#41](https://github.com/petrugio/petrugio-s-coffee/issues/41) | Store Manager/admin | view messages sent to me by users           | I can attempt to solve the issue                    |
   
 <hr>
 
+# Design
+
+## Wireframes
+Wireframes were made using [Balsamiq](https://balsamiq.com/).
+During development effort was put in to make the final website look and function as described in wireframe.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/wireframes/Home.png)
+
+**Products**
+
+![Image](documentation/wireframes/Products.png)
+
+**Product detail**
+
+![Image](documentation/wireframes/Product_detail.png)
+
+**Basket**
+
+![Image](documentation/wireframes/Basket.png)
+
+**Checkout**
+
+![Image](documentation/wireframes/Checkout.png)
+
+**Order Confirmation**
+
+![Image](documentation/wireframes/Order_Confirmation.png)
+
+**Register**
+
+![Image](documentation/wireframes/Register.png)
+
+**Login**
+
+![Image](documentation/wireframes/Login.png)
+
+**Logout**
+
+![Image](documentation/wireframes/Logout.png)
+
+**Profile**
+
+![Image](documentation/wireframes/Profile.png)
+
+**Product management**
+
+![Image](documentation/wireframes/Product_management.png)
+
+**Contact**
+
+![Image](documentation/wireframes/Contact.png)
+
+**Blog**
+
+![Image](documentation/wireframes/Blog.png)
+
+**Blog detail**
+
+![Image](documentation/wireframes/Blog_detail.png)
+
+**Testimonials**
+
+![Image](documentation/wireframes/Testimonials.png)
+
+**Add Testimonial**
+
+![Image](documentation/wireframes/Add_Testimonial.png)
+
+**404**
+
+![Image](documentation/wireframes/404.png)
+
+</details> 
+
+<br>
+
+## Database
+
+Custom data models were build for this project.
+Bellow is the data model and Entity Relationship Diagram created with [DBeaver](https://dbeaver.io/) Universal Database Tool:
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Database schema in relation with logged in user**
+
+![ER Diagram](documentation/db/schema.jpg)
+
+**Allauth** library was used for the user authentication system, which utilities the built in Django User Model removed the need to build a custom User model for user authentication.
+
+![image](documentation/db/allauth.jpg)
+
+**Products** app model was adapted and modified for this project from Boutique Ado walk trough project
+
+![Image](documentation/db/model_products.jpg)
+![Image](documentation/db/model_products1.jpg)
+
+**Checkout** app model
+
+![Image](documentation/db/model_checkout.jpg)
+
+**Profile** app model
+
+![Image](documentation/db/model_pofile.jpg)
+
+**Blog** app model was build for this project to provide user useful information related to coffee, coffee products, coffee recipes. Logged in users have the ability to like a blog.
+
+![Image](documentation/db/model_blog.jpg)
+![Image](documentation/db/model_blog1.jpg)
+![Image](documentation/db/model_blog2.jpg)
+
+
+**Testimonials** app model was build for this project to provide user the ability to post a testimonial for other users to see. Logged in users that already made an order have the ability to post a testimonial.
+
+![Image](documentation/db/model_testimonial.jpg)
+![Image](documentation/db/model_testimonial1.jpg)
+
+**Contact** app model was build for this project to provide user the ability to contact site Manager/admin. Both users and logged in users have the ability to write a message trough the contact app. 
+
+![Image](documentation/db/model_contact.jpg)
+![Image](documentation/db/model_contact1.jpg)
+
+</details> 
+
+## Fonts
+Google font [Bungee+Shade](https://fonts.google.com/specimen/Bungee+Shade) was used for the website. 
+
+## Color Scheme
+Contrast checker tool from [monsido.com](https://monsido.com/tools/contrast-checker) was  used to find a good contrast ratio.
+
+<details>
+<summary>Details</summary>
+<br>
+
+![Image](documentation/fonts/font1.jpg)
+![Image](documentation/fonts/font2.jpg)
+![Image](documentation/fonts/font3.jpg)
+
+</details>
 
 # Development
-  
-  <br>
 
 ### [#1](https://github.com/petrugio/petrugio-s-coffee/issues/1) Issue: Install Django and dependencies (libraries)
 <details>
@@ -349,6 +505,7 @@ Bellow are screenshots of Agile planing, prioritization and development:
 </details>
 
 ### [#14](https://github.com/petrugio/petrugio-s-coffee/issues/14) USER STORY: Products
+
 <details>
 <summary>Details</summary>
 <br>
@@ -1402,3 +1559,483 @@ Bellow are screenshots of Agile planing, prioritization and development:
 ![Image](documentation/features/admin_msg_crud.jpg)
 
 </details>
+
+# Social Media Marketing
+
+As part of social media marketing strategy, a Facebook page has been created to help increase the number of visitors to our site.
+
+<details>
+<summary>Details</summary>
+<br>
+
+![Image](documentation/features/facebook.jpg)
+
+</details>
+
+
+# Testing
+
+## Responsive Design
+[Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) and [Pesticide Chrome extension](https://chrome.google.com/webstore/detail/pesticide-for-chrome-with/neonnmencpneifkhlmhmfhfiklgjmloi) was regularly used during development to test responsiveness on different  screen sizes.   
+To make the website responsive [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) and CSS was used.
+Responsiveness for different screen sizes can be seen in the features section above. 
+
+## Validator Testing
+
+### HTML5
+Code passed official [W3C Validator testing](https://validator.w3.org/#validate_by_uri).
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/w3c/home.jpg)
+
+**Sign up**
+
+![Image](documentation/testing/w3c/signup.jpg)
+
+**Login**
+
+![Image](documentation/testing/w3c/login.jpg)
+
+**Products**
+
+![Image](documentation/testing/w3c/p.jpg)
+
+**Product detail**
+
+![Image](documentation/testing/w3c/p_detail.jpg)
+
+**Blog**
+
+![Image](documentation/testing/w3c/b.jpg)
+
+**Blog detail**
+
+![Image](documentation/testing/w3c/b_detail.jpg)
+
+**Testimonials**
+
+![Image](documentation/testing/w3c/t.jpg)
+
+**Testimonial detail**
+
+![Image](documentation/testing/w3c/t_detail.jpg)
+
+**Contact**
+
+![Image](documentation/testing/w3c/contact.jpg)
+
+<br>
+</details>
+
+### CSS3
+
+Css passed official [W3C Validator testing](https://jigsaw.w3.org/css-validator/). There were no mistakes in my CSS.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+By URI
+
+![CSS link](documentation/testing/w3c/css.jpg)
+
+
+<br>
+</details>
+
+### Javascript
+
+The JS was tested with [jshint.com](https://jshint.com/). No errors found.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Stripe-elements.js**
+
+![Image](documentation/testing/js/s.jpg)
+
+**Quantity-input-script.js**
+
+![Image](documentation/testing/js/q.jpg)
+
+**Summernote**
+
+![Image](documentation/testing/js/su.jpg)
+
+<br>
+</details>
+
+### Python
+
+The code was tested with [pycodestyle](https://pypi.org/project/pycodestyle/) extension in Gitpod. No mistakes found.
+Few generic Django lines of code are showing a warning of "Line too long". When I tried to make the lines shorter by indenting them with \ or "" python methods - Django breaks and cannot run any code.  
+Since this is generic Django code it was left as it is.
+
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Setting.py**
+
+![Python](documentation/testing/python/p.jpg)
+
+<br>
+</details>
+
+### Automated testing
+As the time permitted some automated testing was performed to check if pages load, give a 200 or 404 response
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/homepage_loads.jpg)
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/products_loads.jpg)
+
+**Profile**
+
+![Image](documentation/testing/code_testing/profile_loads.jpg)
+
+**Basket**
+
+![Image](documentation/testing/code_testing/basket_loads.jpg)
+
+<br>
+</details>
+
+### Lighthouse
+
+Pages were tested with [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) using the [Lighthouse](https://developers.google.com/web/tools/lighthouse) resource.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+![Image](documentation/testing/lighthouse/home.jpg)
+![Image](documentation/testing/lighthouse/products.jpg)
+![Image](documentation/testing/lighthouse/blog.jpg)
+![Image](documentation/testing/lighthouse/b_detail.jpg)
+![Image](documentation/testing/lighthouse/testimonials.jpg)
+![Image](documentation/testing/lighthouse/t_detail.jpg)
+![Image](documentation/testing/lighthouse/contact.jpg)
+![Robots](documentation/testing/accessability/robots.jpg)
+
+<br>
+</details>
+
+### Accessibility
+
+Accessibility was tested during development using [Wave Chrome extension](https://wave.webaim.org/) and after final deployment was tested with **accessibilitytest.org**
+
+[Accessibility test result ](https://accessibilitytest.org/results/_ws0HhePZuCx)
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+![Accessibility score](documentation/testing/accessability/accessibility_score.jpg)
+
+
+<br>
+</details>
+
+## Automated testing
+As the time permitted some automated testing was performed to check if pages load, give a 200 or 404 response
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/homepage_loads.jpg)
+
+**Homepage**
+
+![Image](documentation/testing/code_testing/products_loads.jpg)
+
+**Profile**
+
+![Image](documentation/testing/code_testing/profile_loads.jpg)
+
+**Basket**
+
+![Image](documentation/testing/code_testing/basket_loads.jpg)
+
+<br>
+</details>
+
+## Database testing
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Profile gets saved to database**
+
+![Image](documentation/testing/code_testing/profile_to_database.jpg)
+
+</details>
+
+## Stripe testing
+
+During development and deployment stripe was regularly checked to see if the payment intents and payments work as intended and do not show any errors.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+**Stripe shows code 200**
+
+![Image](documentation/testing/stripe/test.jpg)
+
+</details>
+
+## Functional Testing
+
+Functional Testing can be view in [Functional_Testing.md](Functional_Testing.md)
+
+## Browser Testing
+Pages behave as expected in all browsers tested. 
+The website was tested in [Chrome](https://www.google.com/intl/en_ie/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/new/),
+[Brave Browser](https://brave.com/),
+[Edge](https://www.microsoft.com/en-us/edge) and [Opera](https://www.opera.com).
+
+
+## Bugs   
+
+### During development 
+During development a quick google search got me the 'needed' answer on how to implement a certain function, operator or library.
+
+<details>
+<summary>Some of the resources used</summary>
+<br>
+
+https://www.geeksforgeeks.org/overriding-the-save-method-django-models/
+https://stackoverflow.com/questions/6574003/django-limiting-query-results
+https://stackoverflow.com/questions/4555898/or-condition-in-django-templates
+https://www.kodnito.com/posts/integrate-summernote-editor-django-application/
+https://www.pythonpool.com/python-check-if-object-has-attribute/
+https://book.pythontips.com/en/latest/ternary_operators.html
+https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#striptags
+https://stackoverflow.com/questions/7894618/blog-excerpt-in-django
+https://stackoverflow.com/questions/35868756/how-to-make-bootstrap-4-cards-the-same-height-in-card-columns
+
+</details>
+
+### Fixed Bugs
+
+Error: Checkout confirmation Total price 
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+When the order got saved by the `checkout` function in `checkout/views.py` the total was not displayed neither on confirmation screen or in the sent email
+
+![Image](documentation/testing/bugs/total_price.jpg)
+
+![Image](documentation/testing/bugs/total_price_email.jpg)
+
+Was fixed by adding the calculation of total price to the `order_form.is_valid()` if statement
+
+![Image](documentation/testing/bugs/total_price_fix.jpg)
+
+<br>
+</details>
+
+
+### Bugs fix during testing: 
+
+Good attempt was made to fix errors, missing closing tags, indentation Errors, and some accessibility errors found by HTML, CSS, JS, PYTHON validators and [Wave Chrome extension](https://wave.webaim.org/).
+
+
+### Unfixed Bugs
+There are still a number of accessibility errors that i didn't have time to address.
+The ability for the user to have a testimonial with the status 'Draft' shown on the 'Testimonials' page or on a separate page, when they are logged. Therefore the field 'Status' was disabled from the 'Add Testimonial' page on the frontend.
+
+# Deployment
+
+Following the advice of our instructor 'deploy early to avoid problems down the line' the website was deployed to Heroku after initial installation.
+Steps taken are described here:
+
+[Epic: Create initial Django Setup](#epic-create-initial-django-setup) 
+
+By mistake I installed Django 4 and started to have some dependencies issues and installed Django 3.2 instead. 
+
+## Heroku
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Navigate to [Heroku](https://www.heroku.com/) and create an account
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY: (Your secret key)
+  - DATABASE_URL: (Postgress database url on ElephantSQL)
+  - USE_AWS: (set to: True)
+  - AWS_ACCESS_KEY_ID (From Amazon AWS S3 bucket details)
+  - AWS_SECRET_ACCESS_KEY (From Amazon AWS S3 bucket details)
+  - STRIPE_PUBLIC_KEY  (From Stripe config details)
+  - STRIPE_SECRET_KEY  (From Stripe config details)
+  - STRIPE_WH_SECRET  (From Stripe config details)
+  - EMAIL_HOST_USER  (From Google config details)
+  - EMAIL_HOST_PASS  (From Google config details)
+- Click the deploy tab
+- Select Deployment method -> GitHub and sign in / authorize when prompted
+- In the search box, find the repository you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy
+- For ease of use Automatic Deploy can be enabled
+- Scroll to the top right corner and press Open App to open newly deployed app
+- If the build fails -> click the resources tab
+- Click View build log and try to find out why it failed and how it can be fixed
+
+Media files were manually uploaded to AWS bucket `media/` folder.
+
+AWS setup steps involved:
+- Login to AWS
+- Create a S3 bucket if already not created
+- Configure the S3 bucket
+- Set up Identity and Access Management (IAM)
+- Get credentials and use them as config vars on Heroku
+
+Stripe setup steps involved:
+- Login to Stripe
+- Create a webhook pointing to the checkout url of deployed site and select events stripe needs to listen to
+- Get credentials and use them as config vars on Heroku
+
+Gmail setup steps involved:
+- Login to Gmail
+- Setup 2FA
+- Create an app password
+- Use credentials as config vars on Heroku
+
+
+## Version Control
+[gitpod.io](https://www.gitpod.io) was used as IDE and for Git version control.
+
+After the initial Django setup a Git branch called [develop](https://github.com/petrugio/petrugio-s-coffee/tree/develop) was used as development branch. 
+
+Code was regularly committed to the develop branch and only after a user story or an epic was working locally a Pull Request was opened on Github.com and code from develop branch was merged into main branch.
+As a good development practice, pull request are linked to the user stories on the agile board to quickly navigate to the PR containing the code committed for that user story. 
+
+ <details>
+<summary>Screenshots</summary>
+<br>
+
+![Pull Requests](documentation/agile/pr.jpg)
+
+<br>
+</details> 
+
+## How to Clone this repository
+
+Here's few steps how to clone the repository: 
+
+  - Navigate to GitHub repository
+  - In the GitHub repository, press the "Code" drop-down button located in the top right
+  - From the drop-down menu choose one of the options: HTTPS, SSH, GitHub CLI
+  - Use this link to clone repository in your environment
+  - Another option is to press "Download ZIP" to download repository to your PC
+  
+Or if you wan to fork it, straight from the repository - go to the top right corner and press - Fork
+
+If you want to run this project in your environment dependencies need to bee installed by running `pip install -r requirements.txt` in your terminal.
+
+# Technologies used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) for the contents and structure of the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) for the styling and animations.
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) JS functionality.
+- [AWS](https://aws.amazon.com/) for static files and media.
+- [Balsamiq](https://balsamiq.com/) for wireframing.
+- [GitHub](https://github.com/) as a remote repository.
+- [gitpod.io](https://www.gitpod.io) was used as IDE and  git version control.
+- [Heroku](https://www.heroku.com/) to deploy the website/app.
+- [ElephantSQL](https://www.elephantsql.com/) to host the database.
+- [Stripe](https://stripe.com/) to handle payments.
+- [Gmail](https://www.gmail.com/) as a email service.
+- [Chrome](https://www.google.com/intl/en_ie/chrome/),  [Firefox](https://www.mozilla.org/en-US/firefox/new/),
+[Brave Browser](https://brave.com/),
+[Edge](https://www.microsoft.com/en-us/edge) and [Opera](https://www.opera.com/) for browser testing the responsiveness.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) for testing screen sizes and using [Lighthouse](https://developers.google.com/web/tools/lighthouse).
+- [Favicon.io](https://favicon.io/favicon-generator/) to create a favicon.
+- [Markdown Monster](https://markdownmonster.west-wind.com/) for writing readme.
+- [Wave Chrome extension](https://wave.webaim.org/) to check web accessibility.
+- [accessibilitytest.org](https://accessibilitytest.org/) to check web accessibility score.
+- [Pesticide Chrome extension](https://chrome.google.com/webstore/detail/pesticide-for-chrome-with/neonnmencpneifkhlmhmfhfiklgjmloi) during development.
+- [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) for testing and to make responsive image.
+- [Django Secret Key Generator](https://djecrety.ir/) for generating secure Django key.
+- [Bulk Image Resizing](https://www.birme.net) for products and blog images.
+- [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for responsive design.
+- [DBeaver Universal Database Tool](https://dbeaver.io/) for data model and Entity Relationship Diagram.
+- [www.xml-sitemaps.com](https://www.xml-sitemaps.com/) to generate sitemap.
+- [www.privacypolicygenerator.info](https://www.privacypolicygenerator.info) to generate privacy policy.
+
+## Frameworks
+[Django==3.2.16](https://docs.djangoproject.com/en/3.2/contents/) Version was used as Github highlighted a vulnerability issue in Django 3.2.
+
+Libraries used:
+* asgiref==3.5.2
+* boto3==1.26.32
+* botocore==1.29.32
+* dj-database-url==0.5.0
+* django-allauth==0.41.0
+* django-countries==7.2.1
+* django-crispy-forms==1.14.0
+* django-storages==1.13.1
+* django-summernote==0.8.20.0
+* gunicorn==20.1.0
+* jmespath==1.0.1
+* oauthlib==3.2.2
+* Pillow==9.3.0
+* psycopg2==2.9.5
+* python3-openid==3.2.0
+* pytz==2022.6
+* requests-oauthlib==1.3.1
+* s3transfer==0.6.0
+* sqlparse==0.4.3
+* stripe==5.0.0
+
+# Credits
+
+  A good bit of project functionality was taken from Code Institute's Boutique Ado walk-trough project and Django Blog walk-trough project.
+   
+  Images and product descriptions were taken from [Google Shopping](https://shopping.google.com/) 
+  
+  Some images were taken from [Pexels.com](https://www.pexels.com) 
+  
+  Blog recepies were taken from [https://insanelygoodrecipes.com](https://insanelygoodrecipes.com/coffee-recipes/) 
+  
+  A list of used resources during development can be found in [During development](#during-development).
+
+# Contact
+
+My name is [Petru Chelban](https://github.com/petrugio) I am a full-stack software developer student at [Code Institute](https://codeinstitute.net/ie/), where I am pursuing Diploma in Full Stack Software Development.
+
+Please do not hesitate to contact me if you require any additional information about this project or wish to discuss work/collaboration opportunities.
+
+- [LinkedIn](https://www.linkedin.com/in/petruchelban/)
+- [GitHub](https://github.com/petrugio)
+
+# Acknowledgments
+
+A big shout out to [Code Institute](https://codeinstitute.net/ie/) for providing me with the opportunity to create this project.
+
+I'd like to thank my mentor [Daisy McGirr](https://github.com/Daisy-McG) for invaluable guidance and for reviewing my website.
+
