@@ -8,6 +8,15 @@ View GitHub repository
 View the live project
 <a href="https://petrugio-s-coffee.herokuapp.com/" target="_blank" rel="noopener">here</a>
 
+**Stripe test cards for checkout** 
+
+- The card payment succeeds and doesn’t require authentication.
+  * Fill out the credit card form using the credit card number 4242 4242 4242 4242 with any expiration, CVC, and postal code.
+- The card payment requires authentication.	
+  * Fill out the credit card form using the credit card number 4000 0025 0000 3155 with any expiration, CVC, and postal code.
+  
+  You can read more about <a href="https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=elements#web-test-the-integration" target="_blank" rel="noopener">here</a>
+
 # Table of Contents
 
 * [User Experience](#user-experience)
@@ -1641,7 +1650,7 @@ By URI
 
 ### Javascript
 
-The alert function was tested with [jshint.com](https://jshint.com/). No errors found.
+The JS was tested with [jshint.com](https://jshint.com/). No errors found.
 
 <details>
 <summary>Screenshots</summary>
@@ -1665,7 +1674,7 @@ The alert function was tested with [jshint.com](https://jshint.com/). No errors 
 ### Python
 
 The code was tested with [pycodestyle](https://pypi.org/project/pycodestyle/) extension in Gitpod. No mistakes found.
-Few generic Django lines of code are showing a warning of "Line too long". When i tied to make the lines shorter by indenting them with \ or "" python methods - Django breaks and cannot run any code.  
+Few generic Django lines of code are showing a warning of "Line too long". When I tried to make the lines shorter by indenting them with \ or "" python methods - Django breaks and cannot run any code.  
 Since this is generic Django code it was left as it is.
 
 
@@ -1782,7 +1791,7 @@ As the time permitted some automated testing was performed to check if pages loa
 
 ## Stripe testing
 
-During development and deployment stripe was regularly checked to see if the payment intents and payments are correctly and do not show any errors.
+During development and deployment stripe was regularly checked to see if the payment intents and payments work as intended and do not show any errors.
 
 <details>
 <summary>Screenshots</summary>
