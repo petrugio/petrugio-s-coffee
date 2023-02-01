@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Code block for displaying current site's sub-page -->
 {% block extra_title %}| Products{% endblock %}
 
+<!-- Code block for displaying the products page -->
 {% block content %}
 
 {% if products|length >= 4 %}
@@ -142,13 +144,15 @@
     
 {% block postloadjs %}
 {{ block.super }}
-  
+
+<!-- Back to top button -->
 <script>
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
 
+<!-- JS code for managing realtime sort functionality -->
 <script>
     $('#sort-selector').change(function() {
         var selector = $(this);

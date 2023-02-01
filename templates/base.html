@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
  <head>
-    <!-- Generic -->
+    <!-- Generic meta tags-->
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -44,8 +44,10 @@
     {% block extra_js %}
     {% endblock %}
 
+     <!-- Code block for displaying current site's sub-page -->
     <title>Petrugio's Coffee {% block extra_title %}{% endblock %}</title>
   </head>
+  <!-- Main page content -->
   <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-platinum pt-lg-2 d-none d-lg-flex">
@@ -107,6 +109,7 @@
                 </ul>
             </div>
         </div>
+        <!-- Code block for displaying navigation depending on the screen size -->
         <div class="row bg-platinum">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 
@@ -120,6 +123,7 @@
             
             </nav>
         </div>
+         <!-- Code block for displaying free delivery threshold -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
                 <p class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</p>                
@@ -127,6 +131,7 @@
         </div>
     </header>
 
+    <!-- Code block for displaying django messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -145,14 +150,17 @@
     </div>
     {% endif %}
 
+    <!-- Code block where the code from pages that extend page header gets injected into -->
     {% block page_header %}
     {% endblock %}
 
+    <!-- Code block where the code from pages that extend base html gets injected into -->
     {% block content %}
     {% endblock %}
 
     {% include 'includes/footer.html' %}
 
+    <!-- JS Code block for displaying Bootstrap toast messages -->
     {% block postloadjs %}
     <script>
         $('.toast').toast('show');

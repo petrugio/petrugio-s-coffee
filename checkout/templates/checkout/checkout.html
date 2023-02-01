@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- Code block for displaying current site's sub-page -->
 {% block extra_title %}| Checkout{% endblock %}
 
+<!-- Code block for displaying the checkout page -->
 {% block content %}
     <div class="container main-container">
         <div class="row">
@@ -136,6 +138,7 @@
     </div>
 {% endblock %}
 
+<!-- Code block Stripe JS functionality -->
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
