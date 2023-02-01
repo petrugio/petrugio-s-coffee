@@ -1,5 +1,5 @@
 
-# Testing
+# Functional Testing
 
 ## Epic - Home App
 
