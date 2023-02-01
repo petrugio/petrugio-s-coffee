@@ -1766,3 +1766,5 @@ As the time permitted some automated testing was performed to check if pages loa
 </details>
 
 ## Functional Testing
+
+Functional Testing can be view in [Functional_Testing.md](Functional_Testing.md)
