@@ -132,8 +132,8 @@ input[name='q']::placeholder {
 
 
 /* Products */
-.products-container {
-    padding-top: 120px;
+.main-container, .products-container {
+    padding-top: 166px;
 }
 
 .image-container {
@@ -368,10 +368,6 @@ input[name='q']::placeholder {
         right: 0;
         left: 0;
         z-index: 1030;
-    }
-
-    .main-container, .products-container {
-        padding-top: 166px;
     }
 }
 
